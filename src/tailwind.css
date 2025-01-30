@@ -6,7 +6,7 @@
     --color-gray: #393E46;
     --color-dark-blue: #222831;
 
-    --font-poppins: "POPPINS";
+    --font-manrope: "MANROPE";
     --font-thicccboi: "THICCCBOI";
 }
 
@@ -22,25 +22,31 @@
 }
 
 @font-face {
-    font-family: "POPPINS";
-    src: url("../fonts/poppins/Poppins-Light.ttf") format('truetype');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: "POPPINS";
-    src: url("../fonts/poppins/Poppins-Regular.ttf") format('truetype');
+    font-family: "MANROPE";
+    src: url("../public/fonts/Manrope/Manrope-Regular.ttf") format('truetype');
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "POPPINS";
-    src: url("../fonts/poppins/Poppins-Medium.ttf") format('truetype');
+    font-family: "MANROPE";
+    src: url("../public/fonts/Manrope/Manrope-Medium.ttf") format('truetype');
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "POPPINS";
-    src: url("../fonts/poppins/Poppins-SemiBold.ttf") format('truetype');
+    font-family: "MANROPE";
+    src: url("../public/fonts/Manrope/Manrope-SemiBold.ttf") format('truetype');
     font-weight: 600;
+}
+
+@font-face {
+    font-family: "MANROPE";
+    src: url("../public/fonts/Manrope/Manrope-Bold.ttf") format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "MANROPE";
+    src: url("../public/fonts/Manrope/Manrope-ExtraBold.ttf") format('truetype');
+    font-weight: 800;
 }
