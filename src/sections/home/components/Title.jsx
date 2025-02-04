@@ -1,5 +1,11 @@
+/**
+ * @param {string} title The text of the title.
+ * @param {string} size The size of the title.
+ * @returns {React.JSX.Element}
+ */
 export function Title({ title, size }) {
     const sizes = {
+        "4xl": "text-3xl md:text-4xl",
         "6xl": "text-5xl md:text-6xl"
     }
     
