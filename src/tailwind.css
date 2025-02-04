@@ -9,6 +9,8 @@
 
     --font-manrope: "MANROPE";
     --font-thicccboi: "THICCCBOI";
+
+    --breakpoint-xl-2: 89rem;
 }
 
 @layer utilities {
