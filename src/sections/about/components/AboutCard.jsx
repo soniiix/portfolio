@@ -11,11 +11,11 @@ export function AboutCard({ title, body, width }) {
             {title && (
                 <h1 className="mb-4 text-xl font-bold text-blue">{title}</h1>
             )}
-            <p className="font-semibold">
+            <div className="font-semibold">
                 {body.map((element, index) => (
                     <span key={index}>{element}</span>
                 ))}
-            </p>
+            </div>
         </div>
     );
 }
