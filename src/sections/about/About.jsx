@@ -59,7 +59,7 @@ export function About() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">
+                                    <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue after:transition-all after:duration-300 group-hover:after:w-full">
                                         Github
                                     </span>
                                     <div className="flex h-11 w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
@@ -72,7 +72,7 @@ export function About() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">
+                                    <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue after:transition-all after:duration-300 group-hover:after:w-full">
                                         LinkedIn
                                     </span>
                                     <div className="flex h-11 w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
