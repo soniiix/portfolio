@@ -28,7 +28,7 @@ export function About() {
                 <AboutCard
                     title={"Mon parcours scolaire"}
                     body={[
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 min-[1074px]:space-y-10">
                             {educationHistory.map((stage, index) => (
                                 <li key={index} className="flex items-start">
                                     <div className="me-3 mt-1 h-3.5 w-3.5 shrink-0 text-blue">
