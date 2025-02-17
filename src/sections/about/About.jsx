@@ -54,7 +54,7 @@ export function About() {
                         body={[
                             <div className="flex flex-row items-center justify-around">
                                 <a
-                                    className="group relative flex flex-row items-center justify-between gap-3"
+                                    className="group relative flex flex-row items-center justify-between gap-2 sm:gap-3"
                                     href="https://github.com/soniiix"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -62,12 +62,12 @@ export function About() {
                                     <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue after:transition-all after:duration-300 group-hover:after:w-full">
                                         Github
                                     </span>
-                                    <div className="flex h-11 w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
+                                    <div className="flex h-10 w-10 sm:h-11 sm:w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
                                         <IoLogoGithub size={30} />
                                     </div>
                                 </a>
                                 <a
-                                    className="group relative flex flex-row items-center justify-between gap-3"
+                                    className="group relative flex flex-row items-center justify-between gap-2 sm:gap-3"
                                     href="https://www.linkedin.com/in/quentin-couzinet/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -75,7 +75,7 @@ export function About() {
                                     <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue after:transition-all after:duration-300 group-hover:after:w-full">
                                         LinkedIn
                                     </span>
-                                    <div className="flex h-11 w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
+                                    <div className="flex  h-10 w-10 sm:h-11 sm:w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
                                         <GrLinkedinOption size={28} />
                                     </div>
                                 </a>
