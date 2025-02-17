@@ -39,6 +39,7 @@ export function Projects() {
                     )
                     .map((project) => 
                         <ProjectCard 
+                            key={project.title}
                             image={project.image}
                             title={project.title}
                             technologies={project.technologies}
