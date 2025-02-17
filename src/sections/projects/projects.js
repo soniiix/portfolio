@@ -1,4 +1,4 @@
-const IMAGE_PATH = "src/assets/images/";
+const IMAGE_PATH = "src/assets/images/projects/";
 
 export const PROJECTS = [
     {
