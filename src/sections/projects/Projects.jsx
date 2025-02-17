@@ -2,27 +2,7 @@ import { Title } from "../home/components/Title";
 import { FilterButton } from "./components/FilterButton";
 import { useState } from "react";
 import { ProjectCard } from "./components/ProjectCard";
-
-const PROJECTS = [
-    {
-        image: "src/assets/images/projects/hackat-web.png",
-        technologies: "Symfony, Bootstrap",
-        title: "Hackat'Web",
-        description:
-            "Projet de BTS SIO. Développement d'une application web permettant la gestion complète d'inscriptions à des hackathons: CRUD, favoris, gestion de comptes, sécurité...",
-        github: "https://github.com/soniiix/hackathon/tree/master/hackatWeb",
-        category: "WEB",
-    },
-    {
-        image: "src/assets/images/projects/listdir.png",
-        technologies: "Node JS, NPM",
-        title: "listdir",
-        description:
-            "Création d'une commande permettant de lister en détail le contenu d'un répertoire. Publication sur NPM pour la rendre installable.",
-        github: "https://github.com/soniiix/nodejs-listdir",
-        category: "OTHER",
-    },
-];
+import { PROJECTS } from "./projectsData.js"
 
 const CATEGORIES = [
     {label: "Tout", value: "ALL"},
