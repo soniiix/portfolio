@@ -5,9 +5,21 @@ export function FormInput({ label, name, textArea = false }) {
         <div className="flex flex-col space-y-3 font-manrope font-semibold">
             <label>Votre {label.toLowerCase()}</label>
             {textArea 
-                ? <textarea placeholder={label} name={name} className={inputClassName} rows={4}/>
-                : <input placeholder={label} name={name} className={inputClassName}/>
+                ?
+                    <textarea
+                        placeholder={label}
+                        name={name}
+                        className={inputClassName}
+                        rows={4}
+                    />
+                :
+                    <input
+                        type={label.toLowerCase() == "email" ? "email" : "text"}
+                        placeholder={label}
+                        name={name}
+                        className={inputClassName}
+                    />
             }
         </div>
-    )
+    );
 }
