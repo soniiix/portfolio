@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-export function FormInput({ label, name, textArea = false }) {
+export function FormInput({ label, name, autocompleteValue = "on", textArea = false }) {
     const inputId = useId();
 
     const inputClassName = "bg-gray rounded-[16px] py-3 px-6 resize-none focus:outline-2 focus:outline-blue";
@@ -24,6 +24,7 @@ export function FormInput({ label, name, textArea = false }) {
                         placeholder={label}
                         name={name}
                         className={inputClassName}
+                        autoComplete={autocompleteValue}
                     />
             }
         </div>
