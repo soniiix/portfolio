@@ -1,7 +1,8 @@
 /**
- * @param {string} title The title of the link.
- * @param {string} anchorId The id of the anchor the link refers to.
- * @returns {React.JSX.Element}
+ * @param {Object} props
+ * @param {string} props.title The title of the link.
+ * @param {string} props.anchorId The id of the anchor the link refers to.
+ * @returns {JSX.Element}
  */
 export function NavLink({ title, anchorId = "" }) {
     return (

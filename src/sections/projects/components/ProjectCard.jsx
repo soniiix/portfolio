@@ -2,11 +2,12 @@ import { IoLogoGithub } from "react-icons/io";
 import { TbExternalLink } from "react-icons/tb";
 
 /**
- * @param {string} title
- * @param {string} description
- * @param {string} image The source link of the image.
- * @param {string} technologies
- * @param {string} github The link to the project's Github repository.
+ * @param {Object} props
+ * @param {string} props.title
+ * @param {string} props.description
+ * @param {string} props.image The source link of the image.
+ * @param {string} props.technologies
+ * @param {string} props.github The link to the project's Github repository.
  * @returns {JSX.Element}
  */
 export function ProjectCard({ title, description, image, technologies, github }) {

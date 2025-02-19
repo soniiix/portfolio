@@ -1,7 +1,8 @@
 /**
- * @param {string} title The text of the title.
- * @param {string} size The size of the title.
- * @returns {React.JSX.Element}
+ * @param {Object} props
+ * @param {string} props.title The text of the title.
+ * @param {string} props.size The size of the title.
+ * @returns {JSX.Element}
  */
 export function Title({ title, size }) {
     const sizes = {
