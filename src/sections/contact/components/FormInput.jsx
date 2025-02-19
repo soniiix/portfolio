@@ -11,7 +11,7 @@ import { useId } from "react";
 export function FormInput({ label, name, autocompleteValue = "on", textArea = false }) {
     const inputId = useId();
 
-    const inputClassName = "bg-gray rounded-[16px] py-3 px-6 resize-none focus:outline-2 focus:outline-blue";
+    const inputClassName = "bg-gray rounded-[16px] py-3 px-6 resize-none focus:outline-2 focus:outline-blue autofill:transition-colors autofill:duration-[5000000ms]";
 
     return (
         <div className="flex flex-col space-y-3 font-manrope font-semibold">

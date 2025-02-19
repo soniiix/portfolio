@@ -8,7 +8,7 @@ export function Form() {
                 <FormInput label="Prénom" name="firstname" autocompleteValue="given-name"/>
             </div>
             <FormInput label="Email" name="email" autocompleteValue="email"/>
-            <FormInput label="Message" name="message" autocompleteValue="off" textArea={true}/>
+            <FormInput label="Message" name="message" textArea={true}/>
         </form>
     )
 }
