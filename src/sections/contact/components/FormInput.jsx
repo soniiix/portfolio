@@ -9,7 +9,7 @@ import { useId } from "react";
  * @param {string} props.error A possible generated error to display.
  * @returns {JSX.Element}
  */
-export function FormInput({ label, name, autocompleteValue = "on", textArea = false, error }) {
+export function FormInput({ label, name, autocompleteValue = "on", textArea = false, error, onInputChange }) {
     const inputId = useId();
 
     const inputClassName = "bg-gray rounded-[16px] py-3 px-6 resize-none focus:outline-2 focus:outline-blue autofill:transition-colors autofill:duration-[5000000ms] " + (error && "outline-2 outline-red-500");
@@ -25,6 +25,7 @@ export function FormInput({ label, name, autocompleteValue = "on", textArea = fa
                         name={name}
                         className={inputClassName}
                         rows={4}
+                        onChange={onInputChange}
                     />
                 :
                     <input
@@ -34,6 +35,7 @@ export function FormInput({ label, name, autocompleteValue = "on", textArea = fa
                         name={name}
                         className={inputClassName}
                         autoComplete={autocompleteValue}
+                        onChange={onInputChange}
                     />
             }
             {error && <span className="text-red-500">{error}</span>}

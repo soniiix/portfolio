@@ -6,6 +6,23 @@ export function Form() {
     const [errors, setErrors] = useState({});
     const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 
+    const handleInputChange = ((e) => {
+        setErrors((prevErrors) => {
+            const newErrors = {...prevErrors};
+            const inputName = e.target.name;
+
+            if (inputName === "email"){
+                if (!emailRegex.test(e.target.value)){
+                    newErrors.email = "Adresse email invalide.";
+                    return newErrors;
+                }
+            }
+
+            delete newErrors[inputName];
+            return newErrors;
+        })
+    })
+
     const handleSubmit = ((e) => {
         e.preventDefault();
         let newErrors = {};
@@ -35,11 +52,11 @@ export function Form() {
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-7">
             <div className="grid grid-cols-1 gap-y-7 lg:grid-cols-2 lg:gap-x-6">
-                <FormInput label="Nom" name="lastname" autocompleteValue="family-name" error={errors.lastname}/>
-                <FormInput label="Prénom" name="firstname" autocompleteValue="given-name" error={errors.firstname}/>
+                <FormInput label="Nom" name="lastname" autocompleteValue="family-name" error={errors.lastname} onInputChange={handleInputChange}/>
+                <FormInput label="Prénom" name="firstname" autocompleteValue="given-name" error={errors.firstname} onInputChange={handleInputChange}/>
             </div>
-            <FormInput label="Email" name="email" autocompleteValue="email" error={errors.email}/>
-            <FormInput label="Message" name="message" textArea={true} error={errors.message}/>
+            <FormInput label="Email" name="email" autocompleteValue="email" error={errors.email} onInputChange={handleInputChange}/>
+            <FormInput label="Message" name="message" textArea={true} error={errors.message} onInputChange={handleInputChange}/>
 
             <button type="submit" className=" flex flex-row gap-2 items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover font-manrope">
                 <span>Envoyer</span>
