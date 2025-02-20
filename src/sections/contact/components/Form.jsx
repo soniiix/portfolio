@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FormInput } from "./FormInput";
 import { RiMailSendLine } from "react-icons/ri";
+import { sendMail } from "../sendMail";
 
 export function Form() {
     const [errors, setErrors] = useState({});
@@ -44,9 +45,17 @@ export function Form() {
 
         if(Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
+            return;
         }
 
-        //@TODO send email
+        // Send mail
+        let formData = new FormData();
+        formData.append("lastname", lastname);
+        formData.append("firstname", firstname);
+        formData.append("email", email);
+        formData.append("message", message);
+
+        sendMail(formData);
     };
 
     return (
