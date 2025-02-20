@@ -7,6 +7,7 @@ import { useId } from "react";
  * @param {string} [props.autocompleteValue] The optional value to use for the autocomplete input attribute.
  * @param {boolean} [props.textArea] Specifies whether the input will be a text area or not. False by default.
  * @param {string} props.error A possible generated error to display.
+ * @param {function} props.onInputChange An input change handler.
  * @returns {JSX.Element}
  */
 export function FormInput({ label, name, autocompleteValue = "on", textArea = false, error, onInputChange }) {
