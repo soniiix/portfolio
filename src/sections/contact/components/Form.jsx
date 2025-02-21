@@ -78,12 +78,14 @@ export function Form() {
 
     if (isSent) {
         return (
-            <div className="rounded-[16px] bg-gray text-center px-18 py-5 flex flex-col items-center justify-center gap-3 font-manrope">
+            <div className="flex flex-col items-center justify-center gap-3 rounded-[16px] bg-gray px-18 py-5 text-center font-manrope">
                 <IoIosCheckmarkCircleOutline size={60} color="#05df72"/>
-                <h2 className="font-bold text-xl text-green-400">Message envoyé !</h2>
-                <span className="font-semibold">Merci pour votre message, je vous répondrai dans les plus brefs délais.</span>
+                <h2 className="text-xl font-bold text-green-400">Message envoyé !</h2>
+                <span className="font-semibold">
+                    Merci pour votre message, je vous répondrai dans les plus brefs délais.
+                </span>
                 <button 
-                    className="flex flex-row items-center justify-center hover:cursor-pointer mt-2 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white group"
+                    className="group mt-2 flex flex-row items-center justify-center rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:cursor-pointer hover:border-blue hover:bg-blue hover:text-white"
                     onClick={handleReset}
                 >
                     Retour
@@ -125,10 +127,10 @@ export function Form() {
                 error={errors.message}
                 onInputChange={handleInputChange}
             />
-            <button type="submit" className="min-h-[48px] flex flex-row gap-2 items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover">
+            <button type="submit" className="flex min-h-[48px] flex-row items-center justify-center gap-2 rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover">
                 {isLoading
-                    ? <div className="animate-spin mt-0.5">
-                        <CgSpinner size={20} style={{  }}/>
+                    ? <div className="mt-0.5 animate-spin">
+                        <CgSpinner size={20}/>
                     </div>
                     : <>
                         <span>Envoyer</span>
@@ -136,7 +138,7 @@ export function Form() {
                     </>
                 }
             </button>
-            {errors.submitError && <span className="text-red-500 font-semibold font-manrope">{errors.submitError}</span>}
+            {errors.submitError && <span className="font-manrope font-semibold text-red-500">{errors.submitError}</span>}
         </form>
     );
 }
