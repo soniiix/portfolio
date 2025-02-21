@@ -3,10 +3,12 @@ import { FormInput } from "./FormInput";
 import { RiMailSendLine } from "react-icons/ri";
 import { sendMail } from "../sendMail";
 import { CgSpinner } from "react-icons/cg";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 export function Form() {
     const [errors, setErrors] = useState({});
     const [isLoading, setIsLoading] = useState(false);
+    const [isSent, setIsSent] = useState(false)
     const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 
     const handleInputChange = (e) => {
@@ -61,14 +63,35 @@ export function Form() {
 
         try {
             await sendMail(formData);
+            setIsSent(true);
         } catch (error) {
             newErrors.submitError = "Erreur lors de l'envoi du formulaire, veuillez réessayer.";
             setErrors(newErrors);
         } finally {
             setIsLoading(false);
         }
-        
     };
+
+    const handleReset = () => {
+        setIsSent(false);
+    }
+
+    if (isSent) {
+        return (
+            <div className="rounded-[16px] bg-gray text-center px-18 py-5 flex flex-col items-center justify-center gap-3 font-manrope">
+                <IoIosCheckmarkCircleOutline size={60} color="#05df72"/>
+                <h2 className="font-bold text-xl text-green-400">Message envoyé !</h2>
+                <span className="font-semibold">Merci pour votre message, je vous répondrai dans les plus brefs délais.</span>
+                <button 
+                    className="flex flex-row items-center justify-center hover:cursor-pointer mt-2 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white group"
+                    onClick={handleReset}
+                >
+                    Retour
+                </button>
+            </div>
+
+        );
+    }
 
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-7">
