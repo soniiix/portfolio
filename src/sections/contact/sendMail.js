@@ -1,6 +1,7 @@
 /**
  * Send an email from contact form data using Web3Forms.
  * @param {FormData} formData
+ * @returns {Promise}
  */
 export async function sendMail(formData) {
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
