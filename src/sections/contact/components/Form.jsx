@@ -78,14 +78,14 @@ export function Form() {
 
     if (isSent) {
         return (
-            <div className="flex flex-col items-center justify-center gap-3 rounded-[16px] bg-gray px-18 py-5 text-center font-manrope">
+            <div className="min-h-[568px] lg:min-h-[456px] flex flex-col items-center justify-center gap-3 rounded-[16px] bg-gray lg:px-18 px-8 py-5 text-center font-manrope">
                 <IoIosCheckmarkCircleOutline size={60} color="#05df72"/>
                 <h2 className="text-xl font-bold text-green-400">Message envoyé !</h2>
                 <span className="font-semibold">
                     Merci pour votre message, je vous répondrai dans les plus brefs délais.
                 </span>
                 <button 
-                    className="group mt-2 flex flex-row items-center justify-center rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:cursor-pointer hover:border-blue hover:bg-blue hover:text-white"
+                    className="group mt-3 flex flex-row items-center justify-center rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:cursor-pointer hover:border-blue hover:bg-blue hover:text-white"
                     onClick={handleReset}
                 >
                     Retour
