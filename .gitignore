@@ -25,3 +25,6 @@ dist-ssr
 
 # My personal docs
 src/assets/docs/
+
+# Environment variables
+.env
