@@ -3,7 +3,7 @@
  * @param {FormData} formData
  */
 export async function sendMail(formData) {
-    formData.append("access_key", "5651075e-b899-4993-8d67-33cd6c082839");
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
     formData.append("subject", "Nouveau message reçu via le formulaire de contact")
     formData.append("from_name", "Portfolio")
 
