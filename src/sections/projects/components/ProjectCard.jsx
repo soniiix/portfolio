@@ -22,7 +22,11 @@ export function ProjectCard({ title, description, image, technologies, github })
                 <p className="mt-2 font-semibold">{description}</p>
                 <div className="flex-grow"></div>
                 <div className="mt-3 flex flex-row items-center justify-end">
-                    <a href={github}>
+                    <a 
+                        href={github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <IoLogoGithub size={33} color="#0788FF" />
                     </a>
                     <a
