@@ -8,16 +8,28 @@ export async function sendMail(formData) {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-        },
-        body: json,
-    }).then((res) => res.json());
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: json
+        });
+        
+        if (!response.ok) {
+            throw new Error("HTTP Error " + response.status);
+        }
+        
+        const jsonResponse = await response.json();
 
-    if (res.success) {
-        console.log("Success", res);
+        if (!jsonResponse.success) {
+            throw new Error(jsonResponse.message);
+        }
+        return jsonResponse;
+    } catch (error) {
+        console.error("Mail sending error", error);
+        throw error;
     }
 }

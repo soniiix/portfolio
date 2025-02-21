@@ -2,9 +2,11 @@ import { useState } from "react";
 import { FormInput } from "./FormInput";
 import { RiMailSendLine } from "react-icons/ri";
 import { sendMail } from "../sendMail";
+import { CgSpinner } from "react-icons/cg";
 
 export function Form() {
     const [errors, setErrors] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
     const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 
     const handleInputChange = (e) => {
@@ -24,10 +26,11 @@ export function Form() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        let newErrors = {};
+        setIsLoading(true);
         setErrors({});
+        let newErrors = {};
 
         let firstname = e.target.firstname.value.trim();
         let lastname = e.target.lastname.value.trim();
@@ -45,6 +48,7 @@ export function Form() {
 
         if(Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
+            setIsLoading(false);
             return;
         }
 
@@ -55,7 +59,15 @@ export function Form() {
         formData.append("email", email);
         formData.append("message", message);
 
-        sendMail(formData);
+        try {
+            await sendMail(formData);
+        } catch (error) {
+            newErrors.submitError = "Erreur lors de l'envoi du formulaire, veuillez réessayer.";
+            setErrors(newErrors);
+        } finally {
+            setIsLoading(false);
+        }
+        
     };
 
     return (
@@ -90,10 +102,18 @@ export function Form() {
                 error={errors.message}
                 onInputChange={handleInputChange}
             />
-            <button type="submit" className="flex flex-row gap-2 items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover">
-                <span>Envoyer</span>
-                <RiMailSendLine style={{ marginTop: "1px" }}/>
+            <button type="submit" className="min-h-[48px] flex flex-row gap-2 items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover">
+                {isLoading
+                    ? <div className="animate-spin mt-0.5">
+                        <CgSpinner size={20} style={{  }}/>
+                    </div>
+                    : <>
+                        <span>Envoyer</span>
+                        <RiMailSendLine style={{ marginTop: "1px" }}/>
+                    </>
+                }
             </button>
+            {errors.submitError && <span className="text-red-500 font-semibold font-manrope">{errors.submitError}</span>}
         </form>
     );
 }
