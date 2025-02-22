@@ -7,9 +7,9 @@ export function Navbar() {
             <NavLink title="À propos" anchorId="about"/>
             <NavLink title="Réalisations" anchorId="projects"/>
             <NavLink title="Expérience" anchorId="experience"/>
-            <button className="rounded-[20px] bg-blue px-[30px] py-[12px] font-bold hover:cursor-pointer hover:bg-btn-hover">
+            <a href="#contact" className="rounded-[20px] bg-blue px-[30px] py-[12px] font-bold hover:cursor-pointer hover:bg-btn-hover">
                 Me contacter
-            </button>
+            </a>
         </nav>
     );
 }

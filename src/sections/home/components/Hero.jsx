@@ -14,7 +14,7 @@ export function Hero() {
                 </span>
                 {/* ACTION BUTTONS */}
                 <div className="mt-5 grid w-full grid-cols-5 gap-x-2 gap-y-3 font-manrope sm:flex sm:flex-row sm:gap-0">
-                    <a className="col-span-5 flex flex-row items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover">
+                    <a href="#projects" className="col-span-5 flex flex-row items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover">
                         Voir mes réalisations
                     </a>
                     <a
