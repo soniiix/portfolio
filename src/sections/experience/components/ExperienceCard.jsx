@@ -15,8 +15,16 @@ export function ExperienceCard({ title, company, period, location, missions, rep
                 {location}
             </span>
             <ul className="list-disc marker:text-blue pl-4 space-y-8">
-                {missions.map((mission) => 
-                    <li key={mission} className="mb-4">{mission}</li>
+                {missions.map((mission, index) => 
+                    <li key={index} className="mb-4">
+                        {mission.title}&nbsp;:
+                        <p>
+                            {mission.items.map((item, index) => 
+                                <span key={index}>{item}</span>
+                            )}
+                        </p>
+                        
+                    </li>
                 )}
             </ul>
             <div className="flex flex-row justify-end">
