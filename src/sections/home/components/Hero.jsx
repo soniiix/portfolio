@@ -5,16 +5,21 @@ import { GrLinkedinOption } from "react-icons/gr";
 
 export function Hero() {
     return (
-        <section className="grid grid-cols-1 gap-0 px-8 text-white xl-2:grid-cols-2 xl-2:px-26">
-            <div className="flex flex-col items-start justify-center py-20 sm:py-40 md:pl-20">
+        <div className="flex justify-center">
+            <section className="w-full max-w-[1920px] grid grid-cols-1 gap-0 px-8 text-white max-[1210px]:text-center min-[1210px]:grid-cols-2 lg:pt-10 lg:pb-16 xl-2:px-26">
+            <div className="flex flex-col items-center justify-center py-40 min-[1210px]:items-start min-[1210px]:pl-10">
                 <Title title="Quentin Couzinet" size="6xl" />
                 <span className="mt-3 font-manrope text-2xl font-bold">
-                    Étudiant en Licence Professionnelle Métiers <br /> de
-                    l'Informatique, parcours Applications web.
+                    Étudiant en Licence Professionnelle Métiers{" "}
+                    <br className="max-sm:hidden"/> de l'Informatique, parcours
+                    Applications web.
                 </span>
                 {/* ACTION BUTTONS */}
-                <div className="mt-5 grid w-full grid-cols-5 gap-x-2 gap-y-3 font-manrope sm:flex sm:flex-row sm:gap-0">
-                    <a href="#projects" className="col-span-5 flex flex-row items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover">
+                <div className="mt-5 grid w-full grid-cols-5 gap-x-2 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0">
+                    <a
+                        href="#projects"
+                        className="col-span-5 flex flex-row items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover"
+                    >
                         Voir mes réalisations
                     </a>
                     <a
@@ -43,9 +48,11 @@ export function Hero() {
                     </a>
                 </div>
             </div>
-            <div className="hidden pt-3 xl-2:flex xl-2:flex-row xl-2:items-center xl-2:justify-center">
+            <div className="hidden pt-3 min-[1210px]:flex min-[1210px]:flex-row min-[1210px]:items-center min-[1210px]:justify-start">
                 <img src="src/assets/images/code-snippet.png"></img>
             </div>
         </section>
+        </div>
+        
     );
 }
