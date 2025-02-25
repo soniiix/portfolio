@@ -6,7 +6,7 @@ import { GrLinkedinOption } from "react-icons/gr";
 export function Hero() {
     return (
         <div className="flex justify-center">
-            <section className="w-full max-w-[1600px] flex flex-row items-center justify-around px-8 text-white max-[1210px]:text-center min-[1210px] lg:pt-10 lg:pb-16 xl-2:px-26">
+            <section className="flex w-full max-w-[1600px] flex-row items-center justify-around px-8 text-white max-[1210px]:text-center lg:pt-10 lg:pb-16 min-[1424px]:px-26">
                 <div className="flex flex-col items-center justify-center py-40 min-[1210px]:items-start">
                     <Title title="Quentin Couzinet" size="6xl" />
                     <span className="mt-3 font-manrope text-2xl font-bold">
@@ -53,6 +53,5 @@ export function Hero() {
                 </div>
             </section>
         </div>
-        
     );
 }
