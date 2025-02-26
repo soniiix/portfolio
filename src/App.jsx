@@ -4,10 +4,12 @@ import { Projects } from "./sections/projects/Projects"
 import { Contact } from "./sections/contact/Contact"
 import { Experience } from "./sections/experience/Experience"
 import { Footer } from "./sections/footer/Footer"
+import { Header } from "./sections/home/components/Header"
 
 function App() {
     return (
         <>
+            <Header />
             <Home/>
             <About/>
             <Projects/>
