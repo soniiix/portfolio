@@ -15,26 +15,27 @@ export function Hero() {
                         Applications web.
                     </span>
                     {/* ACTION BUTTONS */}
-                    <div className="mt-5 grid w-full grid-cols-5 gap-x-2 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0">
+                    <div className="mt-5 grid w-full grid-cols-1 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0">
                         <a
                             href="#projects"
-                            className="col-span-5 flex flex-row items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover"
+                            className="flex flex-row items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover"
                         >
                             Voir mes réalisations
                         </a>
                         <a
                             href="src/assets/docs/resume.pdf"
                             download="CV_QuentinCouzinet.pdf"
-                            className="col-span-3 flex flex-row items-start justify-center rounded-[20px] bg-white px-[10px] py-[12px] font-bold text-nowrap text-blue hover:cursor-pointer hover:bg-[#e6e6e6] sm:ml-2 sm:px-[30px]"
+                            className="flex flex-row items-start justify-center rounded-[20px] bg-white px-[10px] py-[12px] font-bold text-nowrap text-blue hover:cursor-pointer hover:bg-[#e6e6e6] sm:ml-2 sm:px-[30px]"
                         >
-                            Mon CV &nbsp;
+                            <span className="md:hidden">Télécharger mon CV &nbsp;</span>
+                            <span className="hidden md:block">Mon CV &nbsp;</span>
                             <TbDownload size={20} style={{ marginTop: 1 }} />
                         </a>
                         <a
                             href="https://github.com/soniiix"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer hover:bg-[#e6e6e6] sm:ml-2 sm:px-[10px]"
+                            className="hidden md:flex md:flex-row md:items-center md:justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer hover:bg-[#e6e6e6] ml-2 px-[10px]"
                         >
                             <IoLogoGithub size={30} />
                         </a>
@@ -42,7 +43,7 @@ export function Hero() {
                             href="https://www.linkedin.com/in/quentin-couzinet/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-row items-center justify-center rounded-[20px] bg-white pb-0.5 text-blue hover:cursor-pointer hover:bg-[#e6e6e6] sm:ml-2 sm:px-[10px]"
+                            className="hidden md:flex md:flex-row md:items-center md:justify-center rounded-[20px] bg-white pb-0.5 text-blue hover:cursor-pointer hover:bg-[#e6e6e6] ml-2 px-[10px]"
                         >
                             <GrLinkedinOption size={28} />
                         </a>
