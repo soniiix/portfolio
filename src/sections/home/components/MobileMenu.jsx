@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GrLinkedinOption } from "react-icons/gr";
 import { IoLogoGithub } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { RiStackFill } from "react-icons/ri";
 import { MdOutlineWork } from "react-icons/md";
-import { BsWindowSidebar } from "react-icons/bs";
 
 const SECTIONS = [
     {
@@ -37,19 +36,27 @@ export function MobileMenu() {
         setIsOpen(!isOpen);
     }
     
-    window.addEventListener('scroll', () => {
-        if(isOpen) {
-            toggleMenu();
+    useEffect(() => {
+        const handleScroll = () => {
+            if(isOpen) {
+                toggleMenu();
+            }
         }
-    })
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [isOpen])
 
     return (
         <>
-            <div className="z-10 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover">
-                <button
-                    onClick={toggleMenu}
-                    className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none"
-                >
+            <div 
+                onClick={toggleMenu}
+                className="z-10 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover"
+            >
+                <button className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none">
                     <span
                         className={`block h-0.5 w-6 rounded bg-white transition-transform ${
                             isOpen ? "translate-y-[5px] rotate-45" : ""
