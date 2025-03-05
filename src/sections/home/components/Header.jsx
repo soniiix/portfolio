@@ -28,7 +28,7 @@ export function Header() {
                 <a href="">
                     <img className="h-10 w-10" src="src/assets/images/logo.png"/>
                 </a>
-                <Navbar />
+                <Navbar scrolled={scrolled}/>
             </div>
         </header>
     );
