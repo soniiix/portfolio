@@ -13,7 +13,7 @@ const educationHistory = [
 
 export function About() {
     return (
-        <section id="about" className="flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
+        <section id="about" className="scroll-mt-20 flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
             <div className="h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40 ">
                 <Title size={"4xl"} title={"À propos"} />
                 <div className="mt-7 grid w-full grid-cols-1 gap-9 lg:grid-cols-2">
