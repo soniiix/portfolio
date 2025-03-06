@@ -1,5 +1,6 @@
 import { IoLogoGithub } from "react-icons/io";
 import { GrLinkedinOption } from "react-icons/gr";
+import { Link } from "react-router";
 
 export function Footer() {
     return (
@@ -27,7 +28,7 @@ export function Footer() {
                 <span>
                     2025 © Quentin Couzinet
                 </span>
-                <a href="" className="underline underline-offset-4">
+                <a href="/privacy-policy" className="underline underline-offset-4">
                     Politique de confidentialité
                 </a>
             </div>
