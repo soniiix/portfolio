@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Navbar } from "./Navbar";
 
-export function Header() {
-    const [scrolled, setScrolled] = useState(false);
+export function Header({ baseScrolled = false }) {
+    const [scrolled, setScrolled] = useState(baseScrolled);
     const headerRef = useRef(null)
 
     const headerSpecs = scrolled ? "bg-dark-blue border-[#363c44] shadow-md" : "bg-[#3C538F] border-[#4e6299]";
