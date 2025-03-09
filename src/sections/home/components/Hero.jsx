@@ -17,7 +17,7 @@ export function Hero() {
                     {/* ACTION BUTTONS */}
                     <div className="mt-5 grid w-full grid-cols-1 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0">
                         <a
-                            href="#projects"
+                            href="/#projects"
                             className="flex flex-row items-center justify-center rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover"
                         >
                             Voir mes réalisations

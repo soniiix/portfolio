@@ -9,22 +9,22 @@ import { MdOutlineWork } from "react-icons/md";
 const SECTIONS = [
     {
         title: "Accueil",
-        anchorId: "#home",
+        anchorId: "/#home",
         icon: <IoHome />
     },
     {
         title: "À propos",
-        anchorId: "#about",
+        anchorId: "/#about",
         icon: <FaUser/>
     },
     {
         title: "Réalisations",
-        anchorId: "#projects",
+        anchorId: "/#projects",
         icon: <RiStackFill style={{marginTop: "1px"}} size={18}/>
     },
     {
         title: "Expérience",
-        anchorId: "#experience",
+        anchorId: "/#experience",
         icon: <MdOutlineWork size={18}/>
     },
 ];
@@ -123,7 +123,7 @@ export function MobileMenu() {
                     <div className="flex flex-col items-center justify-center gap-6">
                         <a 
                             onClick={toggleMenu}
-                            href="#contact"
+                            href="/#contact"
                             className="rounded-[20px] bg-white hover:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer">
                             Me contacter
                         </a>
