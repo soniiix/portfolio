@@ -5,6 +5,7 @@ import { IoHome } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { RiStackFill } from "react-icons/ri";
 import { MdOutlineWork } from "react-icons/md";
+import { HashLink } from 'react-router-hash-link';
 
 const SECTIONS = [
     {
@@ -78,9 +79,8 @@ export function MobileMenu() {
                 <div className="flex flex-col pt-30 pb-10 h-full w-full justify-between">
                     <ul className="font-semibold">
                         {SECTIONS.map((section, index) => (
-                            <a 
-                                key={index}
-                                href={section.anchorId}
+                            <HashLink 
+                                to={section.anchorId}
                                 onClick={toggleMenu}
                             >
                                 <li key={index} className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover">
@@ -89,8 +89,7 @@ export function MobileMenu() {
                                     </div>
                                     {section.title}
                                 </li>  
-                            </a>
-                            
+                            </HashLink>
                         ))}
                         <a 
                             href="https://github.com/soniiix"
@@ -121,12 +120,13 @@ export function MobileMenu() {
                     </ul>
 
                     <div className="flex flex-col items-center justify-center gap-6">
-                        <a 
+                        <HashLink
+                            to="/#contact"
                             onClick={toggleMenu}
-                            href="/#contact"
-                            className="rounded-[20px] bg-white hover:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer">
+                            className="rounded-[20px] bg-white hover:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer"
+                        >
                             Me contacter
-                        </a>
+                        </HashLink>
                     </div>
                 </div>
             </div>

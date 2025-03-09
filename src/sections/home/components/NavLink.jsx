@@ -1,3 +1,5 @@
+import { HashLink } from 'react-router-hash-link';
+
 /**
  * @param {Object} props
  * @param {string} props.title The title of the link.
@@ -9,11 +11,11 @@ export function NavLink({ title, anchorId = "", scrolled }) {
     const linkHover = scrolled ? "hover:bg-[#2C323A]" : "hover:bg-[#4e6299]"
 
     return (
-        <a
-            href={anchorId.startsWith("/#") ? anchorId : `/#${anchorId}`}
+        <HashLink
+            to={anchorId.startsWith("/#") ? anchorId : `/#${anchorId}`}
             className={"rounded-[20px] px-[17px] py-[12px] font-semibold " + linkHover}
         >
             {title}
-        </a>
+        </HashLink>
     );
 }
