@@ -5,14 +5,16 @@ export function Header({ baseScrolled = false }) {
     const [scrolled, setScrolled] = useState(baseScrolled);
     const headerRef = useRef(null)
 
-    const headerSpecs = scrolled ? "bg-dark-blue border-[#363c44] shadow-md" : "bg-[#3C538F] border-[#4e6299]";
+    const headerSpecs = scrolled ? "bg-dark-blue border-[#363c44] shadow-b-sm" : "bg-[#3C538F] border-[#4e6299]";
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(
-                headerRef.current.getBoundingClientRect().bottom >=
-                document.getElementById('about').getBoundingClientRect().top - 20
-            );
+            if (document.body.scrollTop > headerRef.current.offsetHeight || 
+                document.documentElement.scrollTop > headerRef.current.offsetHeight) {
+                setScrolled(true)
+            } else {
+                setScrolled(false)
+            }
         }
 
         window.addEventListener('scroll', handleScroll);
@@ -23,7 +25,7 @@ export function Header({ baseScrolled = false }) {
     }, [])
 
     return (
-        <header ref={headerRef} className={"z-2 sticky top-0 w-full flex h-22 justify-center border-b-1  " + headerSpecs}>
+        <header ref={headerRef} className={"transition-colors duration-300 z-2 sticky top-0 w-full flex h-21 justify-center border-b-1  " + headerSpecs}>
             <div className="flex w-full max-w-[1920px] flex-row items-center justify-between px-8 py-5 font-manrope text-white lg:px-26">
                 <a href="/">
                     <img className="h-10 w-10" src="src/assets/images/logo.png"/>
