@@ -32,7 +32,7 @@ export function ExperienceCard({ title, company, period, location, missions, rep
                     href={reportLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-row items-center gap-2.5 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                    className="hover:transition-colors hover:duration-300 flex flex-row items-center gap-2.5 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
                 >
                     <span>Compte rendu de stage</span>
                     <FaArrowRightLong style={{ marginTop: "1px" }}/>
