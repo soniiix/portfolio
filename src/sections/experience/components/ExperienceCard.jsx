@@ -18,7 +18,7 @@ export function ExperienceCard({ title, company, period, location, missions, rep
                 {missions.map((mission, index) => 
                     <li key={index} className="mb-4">
                         {mission.title}&nbsp;:
-                        <p>
+                        <p className="font-medium">
                             {mission.items.map((item, index) => 
                                 <span key={index}>{item}</span>
                             )}
