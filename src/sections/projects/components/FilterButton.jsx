@@ -5,7 +5,7 @@ export function FilterButton({ title, active, value, onClick }) {
         <button
             className={
                 bgColor +
-                " rounded-full px-[32px] py-[10px] font-manrope font-bold hover:cursor-pointer hover:bg-blue"
+                " hover:transition-colors hover:duration-300 rounded-full px-[32px] py-[10px] font-manrope font-bold hover:cursor-pointer hover:bg-blue"
             }
             onClick={onClick}
             value={value}
