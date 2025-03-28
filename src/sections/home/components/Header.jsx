@@ -8,19 +8,21 @@ export function Header({ baseScrolled = false }) {
     const headerSpecs = scrolled ? "bg-dark-blue border-[#363c44] shadow-b-sm" : "bg-[#3C538F] border-[#4e6299]";
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (document.body.scrollTop > headerRef.current.offsetHeight || 
-                document.documentElement.scrollTop > headerRef.current.offsetHeight) {
-                setScrolled(true)
-            } else {
-                setScrolled(false)
+        if (!baseScrolled){
+            const handleScroll = () => {
+                if (document.body.scrollTop > headerRef.current.offsetHeight || 
+                    document.documentElement.scrollTop > headerRef.current.offsetHeight) {
+                    setScrolled(true)
+                } else {
+                    setScrolled(false)
+                }
             }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
+    
+            window.addEventListener('scroll', handleScroll);
+    
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            }
         }
     }, [])
 
