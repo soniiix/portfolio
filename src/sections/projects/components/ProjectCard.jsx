@@ -31,7 +31,7 @@ export function ProjectCard({ title, description, image, technologies, github })
                     </a>
                     <a
                         href="#"
-                        className="ml-2.5 hover:transition-colors hover:duration-300 flex flex-row items-center gap-1 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                        className="ml-2.5 transition-colors duration-200 flex flex-row items-center gap-1 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
                     >
                         <span>En savoir plus</span>
                         <TbExternalLink />

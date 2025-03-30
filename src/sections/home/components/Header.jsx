@@ -5,7 +5,7 @@ export function Header({ baseScrolled = false }) {
     const [scrolled, setScrolled] = useState(baseScrolled);
     const headerRef = useRef(null)
 
-    const headerSpecs = scrolled ? "bg-dark-blue border-[#363c44] shadow-b-sm" : "bg-[#3C538F] border-[#4e6299]";
+    const headerSpecs = scrolled ? "bg-dark-blue border-[#363c44] shadow-sm" : "bg-[#3C538F] border-[#4e6299]";
 
     useEffect(() => {
         if (!baseScrolled){

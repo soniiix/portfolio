@@ -1,6 +1,7 @@
 import { Header } from "../home/components/Header";
 import { Title } from "../home/components/Title";
 import { Footer } from "./Footer";
+import { HashLink } from 'react-router-hash-link';
 
 export function PrivacyPolicy () {
     return (
@@ -14,7 +15,7 @@ export function PrivacyPolicy () {
                             1. Collecte des Informations
                         </h2>
                         <span>
-                            Mon portfolio ne collecte pas directement de données personnelles. Cependant, si vous me contactez via le formulaire de contact, certaines informations (comme le nom et l'adresse email) peuvent être enregistrées pour répondre à votre demande.  
+                            Mon portfolio ne collecte pas directement de données personnelles. Cependant, si vous me contactez via <HashLink to="/#contact" className="underline underline-offset-4 hover:text-blue transition-colors duration-200">le formulaire de contact</HashLink>, certaines informations (comme le nom et l'adresse email) peuvent être enregistrées pour répondre à votre demande.  
                         </span>
                         <h2 className="text-xl font-bold">
                             2. Utilisation des Informations  

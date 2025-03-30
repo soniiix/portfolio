@@ -28,7 +28,7 @@ export function Footer() {
                 <span>
                     2025 © Quentin Couzinet
                 </span>
-                <a href="/privacy-policy" className="underline underline-offset-4">
+                <a href="/privacy-policy" className="underline underline-offset-4 hover:text-blue transition-colors duration-200">
                     Politique de confidentialité
                 </a>
             </div>
