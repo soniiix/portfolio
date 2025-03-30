@@ -80,6 +80,7 @@ export function MobileMenu() {
                     <ul className="font-semibold">
                         {SECTIONS.map((section, index) => (
                             <HashLink 
+                                key={index}
                                 to={section.anchorId}
                                 onClick={toggleMenu}
                             >
