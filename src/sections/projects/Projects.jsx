@@ -46,6 +46,7 @@ export function Projects() {
                                 technologies={project.technologies}
                                 description={project.description}
                                 github={project.github}
+                                name={project.name}
                             />
                         )
                     }

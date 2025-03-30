@@ -2,6 +2,7 @@ const IMAGE_PATH = "src/assets/images/projects/";
 
 export const PROJECTS = [
     {
+        name: "hackat-web",
         image: IMAGE_PATH + "hackat-web.png",
         technologies: "Symfony, Bootstrap",
         title: "Hackat'Web",
@@ -10,6 +11,7 @@ export const PROJECTS = [
         category: "WEB",
     },
     {
+        name: "listdir",
         image: IMAGE_PATH + "listdir.png",
         technologies: "Node JS, NPM",
         title: "listdir",
@@ -18,6 +20,7 @@ export const PROJECTS = [
         category: "OTHER",
     },
     {
+        name: "hackat-event",
         image: IMAGE_PATH + "hackat-event.png",
         technologies: "Ionic, Express JS",
         title: "Hackat'Event",
@@ -26,6 +29,7 @@ export const PROJECTS = [
         category: "MOBILE",
     },
     {
+        name: "portfolio",
         image: IMAGE_PATH + "portfolio.png",
         technologies: "React JS, Tailwind CSS",
         title: "Portfolio",
@@ -34,6 +38,7 @@ export const PROJECTS = [
         category: "WEB",
     },
     {
+        name: "enron-vizualizer",
         image: IMAGE_PATH + "enron-vizualizer.png",
         technologies: "Django, Python, JS",
         title: "Enron Vizualizer",
@@ -42,6 +47,7 @@ export const PROJECTS = [
         category: "WEB",
     },
     {
+        name: "afpa-dpc",
         image: IMAGE_PATH + "afpadpc.png",
         technologies: "HTML, Bootstrap, JS",
         title: "AFPA DPC",

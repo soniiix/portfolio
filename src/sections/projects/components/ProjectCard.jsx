@@ -8,9 +8,10 @@ import { TbExternalLink } from "react-icons/tb";
  * @param {string} props.image The source link of the image.
  * @param {string} props.technologies
  * @param {string} props.github The link to the project's Github repository.
+ * @param {string} props.name The name to use for the project details page link.
  * @returns {JSX.Element}
  */
-export function ProjectCard({ title, description, image, technologies, github }) {
+export function ProjectCard({ title, description, image, technologies, github, name }) {
     return (
         <div className="flex flex-col rounded-[16px] bg-gray">
             <img src={image} className="h-40 w-full rounded-t-[16px] object-cover"/>
@@ -30,7 +31,7 @@ export function ProjectCard({ title, description, image, technologies, github })
                         <IoLogoGithub size={33} color="#0788FF" />
                     </a>
                     <a
-                        href="#"
+                        href={"/project/" + name}
                         className="ml-2.5 transition-colors duration-200 flex flex-row items-center gap-1 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
                     >
                         <span>En savoir plus</span>
