@@ -138,7 +138,7 @@ export function Form() {
                     </>
                 }
             </button>
-            {errors.submitError && <span className="font-manrope font-semibold text-red-500">{errors.submitError}</span>}
+            {errors.submitError && <span className="font-manrope font-medium text-red-500">{errors.submitError}</span>}
         </form>
     );
 }

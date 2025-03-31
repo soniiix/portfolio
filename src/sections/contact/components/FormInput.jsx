@@ -16,7 +16,7 @@ export function FormInput({ label, name, autocompleteValue = "on", textArea = fa
     const inputClassName = "bg-gray rounded-[16px] py-3 px-6 resize-none focus:outline-2 focus:outline-blue autofill:transition-colors autofill:duration-[5000000ms] " + (error && "outline-2 outline-red-500");
 
     return (
-        <div className="flex flex-col space-y-3 font-manrope font-semibold">
+        <div className="flex flex-col space-y-3 font-manrope font-medium">
             <label htmlFor={inputId}>Votre {label.toLowerCase()}</label>
             {textArea 
                 ?
