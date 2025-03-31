@@ -20,7 +20,7 @@ export function ProjectCard({ title, description, image, technologies, github, n
                     {technologies.toUpperCase()}
                 </span>
                 <h1 className="text-2xl font-bold">{title}</h1>
-                <p className="mt-2 font-semibold">{description}</p>
+                <p className="mt-2 font-medium">{description}</p>
                 <div className="flex-grow"></div>
                 <div className="mt-3 flex flex-row items-center justify-end">
                     <a 

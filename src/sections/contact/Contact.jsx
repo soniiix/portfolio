@@ -8,7 +8,7 @@ export function Contact() {
                 <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-12 md:gap-y-9">
                     <div className="flex flex-col gap-8 max-w-[500px]">
                         <Title size="4xl" title="Me contacter"/>
-                        <span className="font-manrope font-semibold">
+                        <span className="font-manrope font-medium">
                             Mon profil vous a-t-il intéressé ?
                             <br/>
                             Avez-vous une question, un commentaire à partager ?
