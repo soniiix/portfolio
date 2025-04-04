@@ -124,7 +124,7 @@ export function MobileMenu() {
                         <HashLink
                             to="/#contact"
                             onClick={toggleMenu}
-                            className="rounded-[20px] bg-white hover:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer"
+                            className="rounded-[20px] bg-white hover:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer transition-colors duration-200"
                         >
                             Me contacter
                         </HashLink>

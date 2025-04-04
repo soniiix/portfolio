@@ -85,7 +85,7 @@ export function Form() {
                     Merci pour votre message, je vous répondrai dans les plus brefs délais.
                 </span>
                 <button 
-                    className="group mt-3 flex flex-row items-center justify-center rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:cursor-pointer hover:border-blue hover:bg-blue hover:text-white"
+                    className="group mt-3 flex flex-row items-center justify-center rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:cursor-pointer hover:border-blue hover:bg-blue hover:text-white transition-colors duration-200"
                     onClick={handleReset}
                 >
                     Retour
@@ -127,7 +127,7 @@ export function Form() {
                 error={errors.message}
                 onInputChange={handleInputChange}
             />
-            <button type="submit" className="flex min-h-[48px] flex-row items-center justify-center gap-2 rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover">
+            <button type="submit" className="flex min-h-[48px] flex-row items-center justify-center gap-2 rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover transition-colors duration-200">
                 {isLoading
                     ? <div className="mt-0.5 animate-spin">
                         <CgSpinner size={20}/>
