@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { IoLogoGithub } from "react-icons/io";
 import { TbExternalLink } from "react-icons/tb";
 
@@ -13,8 +14,18 @@ import { TbExternalLink } from "react-icons/tb";
  */
 export function ProjectCard({ title, description, image, technologies, github, name }) {
     return (
-        <div className="flex flex-col rounded-[16px] bg-gray">
-            <img src={image} className="h-40 w-full rounded-t-[16px] object-cover"/>
+        <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="flex flex-col rounded-[16px] bg-gray shadow-lg"
+        >
+            <a href={"/project/" + name} className="relative overflow-hidden rounded-t-[16px]">
+                <img 
+                    src={image} 
+                    className="h-40 w-full object-cover transition-transform duration-300 ease-out hover:scale-110"
+                />
+            </a>
             <div className="flex flex-col flex-grow gap-2 px-8 py-5 font-manrope">
                 <span className="text-sm font-bold text-blue">
                     {technologies.toUpperCase()}
@@ -39,6 +50,6 @@ export function ProjectCard({ title, description, image, technologies, github, n
                     </a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
