@@ -28,7 +28,7 @@ export function ProjectCard({ title, description, image, technologies, github, n
             </a>
             <div className="flex flex-col flex-grow gap-2 px-8 py-5 font-manrope">
                 <span className="text-sm font-bold text-blue">
-                    {technologies.toUpperCase()}
+                    {technologies.join(", ").toUpperCase()}
                 </span>
                 <h1 className="text-2xl font-bold">{title}</h1>
                 <p className="mt-2 font-medium">{description}</p>
