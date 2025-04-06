@@ -18,12 +18,12 @@ export function ProjectCard({ title, description, image, technologies, github, n
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="flex flex-col rounded-[16px] bg-gray shadow-lg"
+            className="flex flex-col rounded-[16px] bg-gray"
         >
             <a href={"/project/" + name} className="relative overflow-hidden rounded-t-[16px]">
                 <img 
                     src={image} 
-                    className="h-40 w-full object-cover transition-transform duration-300 ease-out hover:scale-110"
+                    className="h-40 w-full object-cover transition-transform duration-500 ease-out hover:scale-110"
                 />
             </a>
             <div className="flex flex-col flex-grow gap-2 px-8 py-5 font-manrope">
