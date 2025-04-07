@@ -1,16 +1,34 @@
+import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 export function ExperienceCard({ title, company, period, location, missions, reportLink }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleClick = () => {
+        setIsOpen(!isOpen)
+    }
+
     return (
         <div className="mt-6 flex flex-col rounded-[16px] bg-gray px-8 py-7 font-manrope font-semibold gap-y-4">
-            <div className="flex flex-col max-[925px]:gap-y-4 min-[925px]:flex-row min-[925px]:items-center justify-between">
-                <h2 className="text-xl font-bold">
-                    {title} • {company}
+            <div className="hover:cursor-pointer flex flex-row items-center justify-between"  onClick={handleClick}>
+                <h2 className="flex text-xl font-bold">
+                    {title} 
+                    <span className="hidden sm:flex">&nbsp;•&nbsp;</span>
+                    <br className="sm:hidden"/> 
+                    {company}
                 </h2>
-                <span className="text-lg min-[925px]:text-xl">
-                    {period}
+                <span className="flex items-center text-lg">
+                    {isOpen
+                        ? <FaChevronUp/>
+                        : <FaChevronDown/>
+                    }
                 </span>
             </div>
+            {isOpen && <>
+            <span className="text-lg">
+                {period}
+            </span>
             <span className="text-blue text-lg">
                 {location}
             </span>
@@ -32,13 +50,13 @@ export function ExperienceCard({ title, company, period, location, missions, rep
                     href={reportLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors duration-200 flex flex-row items-center gap-2.5 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                    className="transition-colors duration-200 flex flex-row items-center gap-2.5 rounded-full border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
                 >
                     <span>Compte rendu de stage</span>
                     <FaArrowRightLong style={{ marginTop: "1px" }}/>
                 </a>
             </div>
-            
+            </>}
         </div>
     )
 }
