@@ -127,7 +127,7 @@ export function Form() {
                 error={errors.message}
                 onInputChange={handleInputChange}
             />
-            <button type="submit" className="flex min-h-[48px] flex-row items-center justify-center gap-2 rounded-[20px] bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover transition-colors duration-200">
+            <button type="submit" className="flex min-h-[48px] flex-row items-center justify-center gap-2 rounded-full bg-blue px-[30px] py-[12px] text-center font-manrope font-bold hover:cursor-pointer hover:bg-btn-hover transition-colors duration-200">
                 {isLoading
                     ? <div className="mt-0.5 animate-spin">
                         <CgSpinner size={20}/>

@@ -63,7 +63,7 @@ export function About() {
                                         <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue after:transition-all after:duration-300 group-hover:after:w-full">
                                             Github
                                         </span>
-                                        <div className="flex h-10 w-10 sm:h-11 sm:w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
+                                        <div className="flex h-10 w-10 sm:h-11 sm:w-11 flex-row items-center justify-center rounded-full bg-white text-blue hover:cursor-pointer ml-1 sm:ml-2 px-[8px]">
                                             <IoLogoGithub size={30} />
                                         </div>
                                     </a>
@@ -76,7 +76,7 @@ export function About() {
                                         <span className="relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue after:transition-all after:duration-300 group-hover:after:w-full">
                                             LinkedIn
                                         </span>
-                                        <div className="flex  h-10 w-10 sm:h-11 sm:w-12 flex-row items-center justify-center rounded-[20px] bg-white text-blue hover:cursor-pointer sm:ml-2 sm:px-[10px]">
+                                        <div className="flex h-10 w-10 sm:h-11 sm:w-11 flex-row items-center justify-center rounded-full bg-white text-blue hover:cursor-pointer ml-1 sm:ml-2 px-[10px]">
                                             <GrLinkedinOption size={28} />
                                         </div>
                                     </a>

@@ -13,7 +13,7 @@ export function NavLink({ title, anchorId = "", scrolled }) {
     return (
         <HashLink
             to={anchorId.startsWith("/#") ? anchorId : `/#${anchorId}`}
-            className={"rounded-[20px] px-[17px] py-[12px] font-semibold " + linkHover}
+            className={"rounded-full px-[17px] py-[12px] font-semibold " + linkHover}
         >
             {title}
         </HashLink>
