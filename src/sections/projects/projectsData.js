@@ -16,6 +16,7 @@ Le projet s'appuyait sur [ce document](/src/assets/docs/subject-hackathon.pdf), 
 Le but principal de l'application est de permettre la consultation des informations sur les hackathons et l'inscription à ces derniers. L'application a été développée avec le framework MVC [Symfony](https://symfony.com/).`,
         github: "https://github.com/soniiix/hackathon/tree/master/hackatWeb",
         category: "WEB",
+        date: "2024"
     },
     {
         name: "listdir",
@@ -32,6 +33,7 @@ Après avoir réalisé le TP proposé dans la vidéo, je me suis dit : et pourqu
 J'ai trouvé ce défi intéressant, car ce genre d'outil est généralement développé en bash. C'était donc l'occasion de sortir de l'ordinaire et d'explorer une autre approche avec Node.js. Je me suis donc lancé dans l'expérience.`,
         github: "https://github.com/soniiix/nodejs-listdir",
         category: "OTHER",
+        date: "2025"
     },
     {
         name: "hackat-event",
@@ -48,6 +50,7 @@ Le projet s'appuyait sur [ce document](/src/assets/docs/subject-hackathon.pdf), 
 Le but principal de l'application est de permettre la consultation des informations sur les hackathons et l'inscription aux ateliers liés aux hackathons. L'application a été développée avec le framework [Ionic](https://ionicframework.com/). Un point important du projet est le développement d'un webservice ainsi qu'une API.`,
         github: "https://github.com/soniiix/hackathon/tree/master/hackatEvent",
         category: "MOBILE",
+        date: "2023/2024"
     },
     {
         name: "portfolio",
@@ -64,6 +67,7 @@ Avant de coder quoi que ce soit, j'ai d'abord créé une maquette sur Figma, ce 
         */
         github: "https://github.com/soniiix/portfolio",
         category: "WEB",
+        date: "2025"
     },
     {
         name: "enron-vizualizer",
@@ -80,6 +84,7 @@ Dans le cadre de ma Licence Professionnelle, le deuxième projet d'année vise �
 L'objectif principal est l'implémentation d'une application web pour visualiser des informations pertinentes contenus les e-mails échangés entre les employés d'Enron (dont quelques externes). Un deuxième objectif est le développement d'un script d'automatisation du peuplement de la base de données, à partir des fichiers (texte plain) contenus dans le jeu de données (20 Go approximativement).`,
         github: "https://github.com/soniiix/enron-data-visualizer",
         category: "WEB",
+        date: "2025"
     },
     {
         name: "afpa-dpc",
@@ -93,5 +98,6 @@ L'objectif principal est l'implémentation d'une application web pour visualiser
 L'AFPA utilisant le LMS développé par DGT Concept, l'objectif était de créer une extension intégrée à la plateforme. Cette extension devait permettre aux apprenants, directement depuis leur espace de formation, de consulter et remplir un questionnaire personnalisé en fonction de leur profil. Une fois les réponses saisies, celles-ci devaient être récupérables par le client via une interface dédiée, afin de pouvoir en assurer le suivi et l'analyse.`,
         github: "https://github.com/soniiix/QCLM_PEE",
         category: "WEB",
+        date: "2023"
     },
 ];
