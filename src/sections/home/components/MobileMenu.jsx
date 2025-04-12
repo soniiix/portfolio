@@ -59,12 +59,12 @@ export function MobileMenu() {
             >
                 <button className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none">
                     <span
-                        className={`block h-0.5 w-6 rounded bg-white transition-transform ${
+                        className={`block h-[0.126rem] w-6 rounded bg-white transition-transform ${
                             isOpen ? "translate-y-[5px] rotate-45" : ""
                         }`}
                     />
                     <span
-                        className={`block h-0.5 w-6 rounded bg-white transition-transform ${
+                        className={`block h-[0.126rem] w-6 rounded bg-white transition-transform ${
                             isOpen ? "-translate-y-[5px] -rotate-45" : ""
                         }`}
                     />
