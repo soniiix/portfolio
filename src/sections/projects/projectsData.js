@@ -17,7 +17,8 @@ Le but principal de l'application est de permettre la consultation des informati
         github: "https://github.com/soniiix/hackathon/tree/master/hackatWeb",
         category: "WEB",
         contextType: "school",
-        date: "2024"
+        date: "2024",
+        teamwork: true
     },
     {
         name: "listdir",
@@ -35,7 +36,8 @@ J'ai trouvé ce défi intéressant, car ce genre d'outil est généralement dév
         github: "https://github.com/soniiix/nodejs-listdir",
         category: "OTHER",
         contextType: "personal",
-        date: "2025"
+        date: "2025",
+        teamwork: false
     },
     {
         name: "hackat-event",
@@ -53,7 +55,8 @@ Le but principal de l'application est de permettre la consultation des informati
         github: "https://github.com/soniiix/hackathon/tree/master/hackatEvent",
         category: "MOBILE",
         contextType: "school",
-        date: "2023/2024"
+        date: "2023/2024",
+        teamwork: false
     },
     {
         name: "portfolio",
@@ -71,7 +74,8 @@ Avant de coder quoi que ce soit, j'ai d'abord créé une maquette sur Figma, ce 
         github: "https://github.com/soniiix/portfolio",
         category: "WEB",
         contextType: "personal",
-        date: "2025"
+        date: "2025",
+        teamwork: false
     },
     {
         name: "enron-vizualizer",
@@ -89,7 +93,8 @@ L'objectif principal est l'implémentation d'une application web pour visualiser
         github: "https://github.com/soniiix/enron-data-visualizer",
         category: "WEB",
         contextType: "school",
-        date: "2025"
+        date: "2025",
+        teamwork: true
     },
     {
         name: "afpa-dpc",
@@ -104,6 +109,7 @@ L'AFPA utilisant le LMS développé par DGT Concept, l'objectif était de créer
         github: "https://github.com/soniiix/QCLM_PEE",
         category: "WEB",
         contextType: "professional",
-        date: "2023"
+        date: "2023",
+        teamwork: true
     },
 ];
