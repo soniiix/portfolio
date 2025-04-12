@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { Header } from "../home/components/Header";
 import { PROJECTS } from "./projectsData";
-import { GoStack, GoTag, GoClock, GoBriefcase, GoMortarBoard, GoHome, GoPeople, GoPerson } from "react-icons/go";
+import { GoStack, GoTag, GoClock, GoBriefcase, GoMortarBoard, GoHome, GoPeople, GoPerson, GoLocation  } from "react-icons/go";
 import { CATEGORIES } from "./Projects";
 
 const PROJECTS_TYPE = [
@@ -30,12 +30,12 @@ export function ProjectDetails() {
                 </div>
             </div>
             <div className="flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
-                <div className="flex flex-row justify-between gap-20 font-manrope h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40">
+                <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-20 font-manrope h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40">
                     <aside className="flex flex-col">
                         <h2 className="text-2xl font-bold mb-5">
                             À&nbsp;propos
                         </h2>
-                        <div className="flex flex-col px-8 py-5 bg-gray h-fit rounded-[16px]">
+                        <div className="flex flex-col min-[560px]:max-lg:grid min-[560px]:grid-cols-2 min-[850px]:grid-cols-3 px-8 py-5 bg-gray h-fit rounded-[16px]">
                             <div className="flex items-center gap-2 mb-2">
                                 <GoClock className="mt-0.5"/>
                                 <span>{project.date}</span>
@@ -57,6 +57,10 @@ export function ProjectDetails() {
                             <div className="flex flex-row items-center gap-2 mb-2">
                                 {project.teamwork ? <GoPeople className="mt-0.5"/> : <GoPerson className="mt-0.5"/>}
                                 <span className="whitespace-nowrap">{project.teamwork ? "Travail en équipe" : "Travail seul"}</span>
+                            </div>
+                            <div className="flex flex-row items-center gap-2 mb-2">
+                                <GoLocation className="mt-0.5"/>
+                                <span className="whitespace-nowrap">{project.location}</span>
                             </div>
                         </div>
                     </aside>

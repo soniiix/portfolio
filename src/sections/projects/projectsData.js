@@ -19,6 +19,7 @@ Le but principal de l'application est de permettre la consultation des informati
         github: "https://github.com/soniiix/hackathon/tree/master/hackatWeb",
         category: "WEB",
         contextType: "school",
+        location: "Les Sables d'Olonne",
         date: "2024",
         teamwork: true
     },
@@ -40,6 +41,7 @@ J'ai trouvé ce défi intéressant, car ce genre d'outil est généralement dév
         github: "https://github.com/soniiix/nodejs-listdir",
         category: "OTHER",
         contextType: "personal",
+        location: "Angers",
         date: "2025",
         teamwork: false
     },
@@ -61,6 +63,7 @@ Le but principal de l'application est de permettre la consultation des informati
         github: "https://github.com/soniiix/hackathon/tree/master/hackatEvent",
         category: "MOBILE",
         contextType: "school",
+        location: "Les Sables d'Olonne",
         date: "2023/2024",
         teamwork: false
     },
@@ -82,6 +85,7 @@ Avant de coder quoi que ce soit, j'ai d'abord créé une maquette sur Figma, ce 
         github: "https://github.com/soniiix/portfolio",
         category: "WEB",
         contextType: "personal",
+        location: "Angers",
         date: "2025",
         teamwork: false
     },
@@ -103,6 +107,7 @@ L'objectif principal est l'implémentation d'une application web pour visualiser
         github: "https://github.com/soniiix/enron-data-visualizer",
         category: "WEB",
         contextType: "school",
+        location: "Angers",
         date: "2025",
         teamwork: true
     },
@@ -121,6 +126,7 @@ L'AFPA utilisant le LMS développé par DGT Concept, l'objectif était de créer
         github: "https://github.com/soniiix/QCLM_PEE",
         category: "WEB",
         contextType: "professional",
+        location: "Les Sables d'Olonne",
         date: "2023",
         teamwork: true
     },
