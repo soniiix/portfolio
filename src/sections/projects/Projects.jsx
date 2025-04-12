@@ -41,10 +41,10 @@ export function Projects() {
                         .map((project) => 
                             <ProjectCard 
                                 key={project.title}
-                                image={project.image}
+                                image={project.cover}
                                 title={project.title}
                                 technologies={project.technologies}
-                                description={project.description}
+                                description={project.summary}
                                 github={project.github}
                                 name={project.name}
                             />
