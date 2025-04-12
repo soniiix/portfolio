@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { Header } from "../home/components/Header";
+import { Footer } from "../footer/Footer"
 import { PROJECTS } from "./projectsData";
 import { GoStack, GoTag, GoClock, GoBriefcase, GoMortarBoard, GoHome, GoPeople, GoPerson, GoLocation  } from "react-icons/go";
 import { CATEGORIES } from "./Projects";
@@ -91,6 +92,7 @@ export function ProjectDetails() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }
