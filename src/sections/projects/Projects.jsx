@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ProjectCard } from "./components/ProjectCard";
 import { PROJECTS } from "./projectsData.js"
 
-const CATEGORIES = [
+export const CATEGORIES = [
     {label: "Tout", value: "ALL"},
     {label: "Web", value: "WEB"},
     {label: "Mobile", value: "MOBILE"},

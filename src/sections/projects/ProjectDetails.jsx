@@ -1,36 +1,64 @@
 import { useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { Header } from "../home/components/Header";
-import { Title } from "../home/components/Title";
 import { PROJECTS } from "./projectsData";
+import { GoStack, GoTag, GoClock, GoBriefcase, GoMortarBoard, GoHome, GoPeople, GoPerson } from "react-icons/go";
+import { CATEGORIES } from "./Projects";
+
+const PROJECTS_TYPE = [
+    {value: "professional", label: "Professionnel", icon: <GoBriefcase className="mt-0.5"/>},
+    {value: "school", label: "Scolaire", icon: <GoMortarBoard className="mt-0.5"/>},
+    {value: "personal", label: "Personnel", icon: <GoHome className="mt-0.5"/>}
+]
 
 export function ProjectDetails() {
     const {projectName} = useParams();
 
-    const project = PROJECTS.find(project => project.name == projectName)
+    const project = PROJECTS.find(project => project.name == projectName);
+
+    const projectType = PROJECTS_TYPE.find(type => type.value == project.contextType);
 
     return (
         <>
             <Header baseScrolled={true}/>
             <div className="flex justify-center bg-linear-to-r from-[#0240C7] to-[#42A3EA] h-full text-white">
                 <div className="w-full max-w-[1920px] px-8 py-18 md:px-24 lg:px-40">
-                    <h1 className="font-manrope font-extrabold text-3xl">{project.title}</h1>
+                    {/*
+                    <span className="text-sm text-[##fffff5db] font-medium font-manrope">{"Projets > " + project.title}</span>
+                    */}
+                    <h1 className="font-manrope font-extrabold text-[32px]">{project.title}</h1>
                 </div>
             </div>
             <div className="flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
-                <div className="flex flex-row justify-between gap-25 font-manrope h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40">
+                <div className="flex flex-row justify-between gap-20 font-manrope h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40">
                     <aside className="flex flex-col">
-                        <h2 className="text-2xl font-bold mb-4">
+                        <h2 className="text-2xl font-bold mb-5">
                             À&nbsp;propos
                         </h2>
-                        <span className="py-1 px-2 bg-blue text-white rounded-md font-semibold text-sm text-center mb-2">CATÉGORIE</span>
-                        <span className="text-center mb-2">{project.category}</span>
-                        <span className="py-1 px-2 bg-blue text-white rounded-md font-semibold text-sm text-center mb-2">TECHNOLOGIES</span>
-                        <ul className="text-center">
-                        {project.technologies.map(technology => 
-                            <li>{technology}</li>
-                        )}
-                        </ul>
+                        <div className="flex flex-col px-8 py-5 bg-gray h-fit rounded-[16px]">
+                            <div className="flex items-center gap-2 mb-2">
+                                <GoClock className="mt-0.5"/>
+                                <span>{project.date}</span>
+                            </div>
+                            <div className="flex items-center gap-2 mb-2">
+                                <GoTag className="mt-0.5"/>
+                                <span>
+                                    {CATEGORIES.find(category => category.value == project.category).label}
+                                </span>
+                            </div>
+                            <div className="flex flex-row items-center gap-2 mb-2">
+                                <GoStack className="mt-0.5"/>
+                                <span className="whitespace-nowrap">{project.technologies.join(", ")}</span>
+                            </div>
+                            <div className="flex flex-row items-center gap-2 mb-2">
+                                {projectType.icon}
+                                <span className="whitespace-nowrap">{projectType.label}</span>
+                            </div>
+                            <div className="flex flex-row items-center gap-2 mb-2">
+                                {project.teamwork ? <GoPeople className="mt-0.5"/> : <GoPerson className="mt-0.5"/>}
+                                <span className="whitespace-nowrap">{project.teamwork ? "Travail en équipe" : "Travail seul"}</span>
+                            </div>
+                        </div>
                     </aside>
                     <div className="flex flex-col">
                         <h2 className="text-2xl font-bold mb-4">
