@@ -5,6 +5,7 @@ import { Footer } from "../footer/Footer"
 import { PROJECTS } from "./projectsData";
 import { GoStack, GoTag, GoClock, GoBriefcase, GoMortarBoard, GoHome, GoPeople, GoPerson, GoLocation  } from "react-icons/go";
 import { CATEGORIES } from "./Projects";
+import Carousel from "./components/Carousel";
 
 const PROJECTS_TYPE = [
     {value: "professional", label: "Professionnel", icon: <GoBriefcase className="mt-0.5"/>},
@@ -83,6 +84,7 @@ export function ProjectDetails() {
                         >
                             {project.context}
                         </ReactMarkdown>
+                        <Carousel/>
                         <h2 className="text-2xl font-bold my-4">
                             Description
                         </h2>
