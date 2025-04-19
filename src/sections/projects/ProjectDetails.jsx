@@ -4,6 +4,8 @@ import { Header } from "../home/components/Header";
 import { Footer } from "../footer/Footer"
 import { PROJECTS } from "./projectsData";
 import { GoStack, GoTag, GoClock, GoBriefcase, GoMortarBoard, GoHome, GoPeople, GoPerson, GoLocation  } from "react-icons/go";
+import { RxDownload, RxArrowRight } from "react-icons/rx";
+import { IoLogoGithub } from "react-icons/io";
 import { CATEGORIES } from "./Projects";
 import Carousel from "./components/Carousel";
 
@@ -17,7 +19,7 @@ export function ProjectDetails() {
     const {projectName} = useParams();
 
     const project = PROJECTS.find(project => project.name == projectName);
-
+    const nextProject = PROJECTS.indexOf(project) == PROJECTS.length - 1 ? PROJECTS[0] : PROJECTS[PROJECTS.indexOf(project) + 1]
     const projectType = PROJECTS_TYPE.find(type => type.value == project.contextType);
 
     return (
@@ -109,6 +111,43 @@ export function ProjectDetails() {
                                 {project.description}
                             </ReactMarkdown>
                         </span>
+                        <h2 className="text-2xl font-bold  mt-8 mb-5">
+                            Voir plus
+                        </h2>
+                        <div className="flex flex-row justify-between">
+                            <a
+                                href={""}
+                                className="transition-colors duration-200 flex flex-row items-center gap-18 rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                            >
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-xl font-bold text-white">Rapport</span>
+                                    <span className="">Télécharger</span>
+                                </div>
+                                <RxDownload size={49}/>
+                            </a>
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="transition-colors duration-200 flex flex-row items-center gap-18 rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                            >
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-xl font-bold text-white">Github</span>
+                                    <span className="">Voir le dépôt</span>
+                                </div>
+                                <IoLogoGithub size={50}/>
+                            </a>
+                            <a
+                                href={"/project/" + nextProject.name}
+                                className="transition-colors duration-200 flex flex-row items-center gap-18 rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                            >
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-xl font-bold text-white">{nextProject.title}</span>
+                                    <span className="">Projet suivant</span>
+                                </div>
+                                <RxArrowRight size={50}/>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
