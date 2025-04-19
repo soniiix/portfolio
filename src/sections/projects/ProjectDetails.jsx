@@ -89,7 +89,25 @@ export function ProjectDetails() {
                             Description
                         </h2>
                         <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, possimus earum fuga ipsam molestias quisquam necessitatibus pariatur velit facilis ea ex explicabo harum aut natus magnam eum sint laboriosam veritatis.
+                            <ReactMarkdown
+                                components={{
+                                    a: ({ node, ...props }) => (
+                                    <a
+                                        {...props}
+                                        className="underline underline-offset-4 hover:text-blue transition-colors duration-200"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    />
+                                    ),ul: ({ node, ...props }) => (
+                                        <ul
+                                            {...props}
+                                            className="list-disc list-inside marker:text-blue"
+                                        />
+                                    )
+                                }}
+                            >
+                                {project.description}
+                            </ReactMarkdown>
                         </span>
                     </div>
                 </div>
