@@ -37,7 +37,7 @@ export function ProjectDetails() {
                         <h2 className="text-2xl font-bold mb-5">
                             À&nbsp;propos
                         </h2>
-                        <div className="flex flex-col min-[560px]:max-lg:grid min-[560px]:grid-cols-2 min-[850px]:grid-cols-3 px-8 py-5 bg-gray h-fit rounded-[16px]">
+                        <div className="flex flex-col min-[560px]:max-lg:grid min-[560px]:grid-cols-2 min-[850px]:grid-cols-3 px-8 py-5 bg-gray h-fit rounded-2xl">
                             <div className="flex items-center gap-2 mb-2">
                                 <GoClock className="mt-0.5"/>
                                 <span>{project.date}</span>

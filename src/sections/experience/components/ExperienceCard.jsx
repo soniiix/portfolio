@@ -10,7 +10,7 @@ export function ExperienceCard({ title, company, period, location, missions, rep
     }
 
     return (
-        <div className="mt-6 flex flex-col rounded-[16px] bg-gray px-8 py-7 font-manrope font-semibold gap-y-4">
+        <div className="mt-6 flex flex-col rounded-2xl bg-gray px-8 py-7 font-manrope font-semibold gap-y-4">
             <div className="hover:cursor-pointer flex flex-row items-center justify-between"  onClick={handleClick}>
                 <h2 className="flex text-xl font-bold">
                     {title} 

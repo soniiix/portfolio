@@ -8,7 +8,7 @@
 export function AboutCard({ title, body, width }) {
     width = width == 2 ? "col-span-1 lg:col-span-2" : "col-span-1";
     return (
-        <div className={"rounded-[16px] bg-gray p-8 font-manrope " + width}>
+        <div className={"rounded-2xl bg-gray p-8 font-manrope " + width}>
             {title && (
                 <h1 className="mb-4 text-xl font-bold text-blue">{title}</h1>
             )}

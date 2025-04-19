@@ -78,7 +78,7 @@ export function Form() {
 
     if (isSent) {
         return (
-            <div className="min-h-[568px] lg:min-h-[456px] flex flex-col items-center justify-center gap-3 rounded-[16px] bg-gray lg:px-18 px-8 py-5 text-center font-manrope">
+            <div className="min-h-[568px] lg:min-h-[456px] flex flex-col items-center justify-center gap-3 rounded-2xl bg-gray lg:px-18 px-8 py-5 text-center font-manrope">
                 <IoIosCheckmarkCircleOutline size={60} color="#05df72"/>
                 <h2 className="text-xl font-bold text-green-400">Message envoyé !</h2>
                 <span className="font-medium">
