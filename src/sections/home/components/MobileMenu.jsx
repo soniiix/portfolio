@@ -55,7 +55,7 @@ export function MobileMenu() {
         <>
             <div 
                 onClick={toggleMenu}
-                className="z-10 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover"
+                className="z-20 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover"
             >
                 <button className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none">
                     <span
@@ -72,7 +72,7 @@ export function MobileMenu() {
             </div>
 
             <div
-                className={`fixed rounded-l-[16px] top-0 right-0 z-5 h-full w-58 transform bg-blue text-white shadow-lg transition-all duration-300 ${
+                className={`fixed rounded-l-[16px] top-0 right-0 z-30 h-full w-58 transform bg-blue text-white shadow-lg transition-all duration-300 ${
                     isOpen ? "right-0" : "right-[-100%]"
                 }`}
             >
