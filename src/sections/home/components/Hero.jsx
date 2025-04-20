@@ -50,7 +50,7 @@ export function Hero() {
                     </div>
                 </div>
                 <div className="hidden pt-3 min-[1210px]:flex min-[1210px]:flex-row min-[1210px]:items-center min-[1210px]:justify-start">
-                    <img src="src/assets/images/code-snippet.png"></img>
+                    <img src="/src/assets/images/code-snippet.png"></img>
                 </div>
             </section>
         </div>
