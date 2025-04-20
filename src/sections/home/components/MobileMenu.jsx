@@ -55,7 +55,7 @@ export function MobileMenu() {
         <>
             <div 
                 onClick={toggleMenu}
-                className="z-20 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover"
+                className="z-40 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover"
             >
                 <button className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none">
                     <span

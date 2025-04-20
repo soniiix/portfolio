@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Title } from "./Title";
 import { TbDownload } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
@@ -8,14 +9,30 @@ export function Hero() {
         <div className="flex justify-center">
             <section className="flex w-full max-w-[1600px] flex-row items-center justify-around px-8 text-white max-[1210px]:text-center lg:pt-10 lg:pb-16 min-[1424px]:px-26">
                 <div className="flex flex-col items-center justify-center py-40 min-[1210px]:items-start">
-                    <Title title="Quentin Couzinet" size="6xl" />
-                    <span className="mt-3 font-manrope text-2xl font-semibold">
+                    <motion.div
+                        className="mt-5 grid w-full grid-cols-1 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                        <Title title="Quentin Couzinet" size="6xl" />
+                    </motion.div>
+                    <motion.span
+                        className="mt-3 font-manrope text-2xl font-semibold"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.8 }}
+                    >
                         Étudiant en Licence Professionnelle Métiers{" "}
-                        <br className="max-sm:hidden"/> de l'Informatique, parcours
-                        Applications web.
-                    </span>
+                        <br className="max-sm:hidden" /> de l'Informatique, parcours Applications web.
+                    </motion.span>
                     {/* ACTION BUTTONS */}
-                    <div className="mt-5 grid w-full grid-cols-1 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0">
+                    <motion.div
+                        className="mt-5 grid w-full grid-cols-1 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    >
                         <a
                             href="/#projects"
                             className="flex flex-row items-center justify-center rounded-full bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover transition-colors duration-200"
@@ -47,11 +64,20 @@ export function Hero() {
                         >
                             <GrLinkedinOption size={28} />
                         </a>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className="hidden pt-3 min-[1210px]:flex min-[1210px]:flex-row min-[1210px]:items-center min-[1210px]:justify-start">
-                    <img src="/src/assets/images/code-snippet.png"></img>
-                </div>
+                <motion.div
+                    className="hidden pt-3 min-[1210px]:flex min-[1210px]:flex-row min-[1210px]:items-center min-[1210px]:justify-start"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                    <img
+                        src="/src/assets/images/code-snippet.png"
+                        alt="Code illustration"
+                        className="max-w-[500px]"
+                    />
+                </motion.div>
             </section>
         </div>
     );
