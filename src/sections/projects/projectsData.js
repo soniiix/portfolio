@@ -8,7 +8,12 @@ export const PROJECTS = [
         technologies: ["Symfony", "Bootstrap"],
         title: "Hackat'Web",
         summary: "Projet de BTS SIO. Développement d'une application web permettant la gestion complète d'inscriptions à des hackathons: CRUD, favoris, gestion de comptes, sécurité...",
-        images: [],
+        images: [
+                IMAGE_PATH + "/hackat-web/image1.png",
+                IMAGE_PATH + "/hackat-web/cover.png",
+                IMAGE_PATH + "/hackat-web/image2.png",
+                IMAGE_PATH + "/hackat-web/image3.png",
+        ],
         context: `Lors de ma 2ème année de BTS SIO, l'un des objectifs majeurs était la réalisation d'un projet métier concret. Celui-ci portait sur le développement de deux applications complémentaires en rapport avec l'organisations d'hackathons : une application web nommée "HackatWeb" et une application mobile nommée "Hackat'Event". C'est sur la première, HackatWeb, que je vais me concentrer ici.
 
 \\
@@ -29,7 +34,7 @@ Parmi les pages principales, on retrouve :
 L'architecture de l'application respecte le modèle MVC. Elle est pensée pour séparer clairement la logique métier, la gestion des données et l'affichage, permettant ainsi une meilleure maintenabilité. L'usage de composants Symfony comme [Security](https://symfony.com/doc/current/security.html) et [Form](https://symfony.com/doc/current/forms.html) a permis d'implémenter un système d'authentification robuste (mots de passe hashés, redirections sécurisées) et des formulaires fiables. Le front, enrichi avec Bootstrap et JavaScript, offre une navigation fluide, avec par exemple une recherche de hackathons en temps réel sans rechargement de page.
 
 \\
-Le projet a été mené de manière agile avec Trello, sur une VM Debian configurée pour refléter un environnement de production. Cette expérience nous a permis d'aller au-delà d'une simple implémentation technique en abordant des problématiques de conception, de sécurité, et de gestion de projet, proches de celles rencontrées dans un contexte professionnel.`,
+Le projet a été mené de manière agile avec Trello, sur une VM Debian configurée pour refléter un environnement de production. Cette expérience nous a permis d'aller au-delà d'une simple implémentation technique en abordant des problématiques de conception, de sécurité, et de gestion de projet, proches de celles rencontrées dans un contexte professionnel. La fiche descriptive de réalisation professionnelle est [disponible ici](/src/assets/docs/e5-sheets/hackat-web.pdf).`,
         github: "https://github.com/soniiix/hackathon/tree/master/hackatWeb",
         category: "WEB",
         contextType: "school",
@@ -44,7 +49,10 @@ Le projet a été mené de manière agile avec Trello, sur une VM Debian configu
         technologies: ["Node JS", "NPM"],
         title: "listdir",
         summary: "Création d'une commande permettant de lister en détail le contenu d'un répertoire. Publication sur NPM pour la rendre installable.",
-        images: [],
+        images: [
+                IMAGE_PATH + "/listdir/image1.png",
+                IMAGE_PATH + "/listdir/image2.png"
+        ],
         context: `Souhaitant approfondir mes connaissances en Node.js, j'ai visionné plusieurs vidéos de Grafikart. L'une d'elles [aborde la lecture et l'écriture de fichiers](https://youtu.be/cT6b6_XzFmI?si=ksSNYuQ3G89FQnLq), un sujet qui m'a particulièrement captivé.
 
 \\
@@ -78,7 +86,11 @@ Ce projet m'a permis de consolider mes bases en Node.js tout en découvrant les 
         technologies: ["Ionic, Express JS"],
         title: "Hackat'Event",
         summary: "Développement d'une application mobile permettant l'inscription à des hackathons et aux ateliers associés, ainsi que la gestion de favoris et l'ajout de commentaires.",
-        images: [],
+        images: [
+                IMAGE_PATH + "/hackat-event/image1.png",
+                IMAGE_PATH + "/hackat-event/image2.png",
+                IMAGE_PATH + "/hackat-event/image3.png"
+        ],
         context: `Lors de ma 2ème année de BTS SIO, l'un des objectifs majeurs était la réalisation d'un projet métier concret. Celui-ci portait sur le développement de deux applications complémentaires en rapport avec l'organisations d'hackathons : une application web nommée "HackatWeb" et une application mobile nommée "Hackat'Event". C'est sur la deuxième, Hackat'Event, que je vais me concentrer ici.
 
 \\
@@ -107,7 +119,7 @@ Parmi les fonctionnalités clés :
 Le projet a été mené selon une approche agile (Trello) et déployé sur une VM Debian configurée pour simuler un environnement de production. L'application repose sur une architecture clairement séparée entre le front-end et le back-end, ce qui m'a permis de bien appréhender les échanges entre services web.
 
 \\
-Le développement en TypeScript, m'a permis d'écrire un code plus robuste et structuré, avec une meilleure gestion des types et des erreurs. Ce projet a ainsi renforcé mes compétences en développement mobile hybride, en conception d'API REST, et en modélisation de données, dans un cadre proche des attentes professionnelles.`,
+Le développement en TypeScript, m'a permis d'écrire un code plus robuste et structuré, avec une meilleure gestion des types et des erreurs. Ce projet a ainsi renforcé mes compétences en développement mobile hybride, en conception d'API REST, et en modélisation de données, dans un cadre proche des attentes professionnelles. La fiche descriptive de réalisation professionnelle est [disponible ici](/src/assets/docs/e5-sheets/hackat-event.pdf).`,
         github: "https://github.com/soniiix/hackathon/tree/master/hackatEvent",
         category: "MOBILE",
         contextType: "school",
@@ -122,7 +134,11 @@ Le développement en TypeScript, m'a permis d'écrire un code plus robuste et st
         technologies: ["React JS", "Tailwind CSS"],
         title: "Portfolio",
         summary: "Développement de mon portfolio avec React, dans le cadre de mon apprentissage de cette technologie. Création de la maquette avec Figma, et design du site avec Tailwind.",
-        images: [],
+        images: [
+                IMAGE_PATH + "/portfolio/image1.png",
+                IMAGE_PATH + "/portfolio/image2.png",
+                IMAGE_PATH + "/portfolio/image3.png"
+        ],
         context: `Dans le cadre de mon apprentissage de [React](https://react.dev/), j'ai entrepris le développement complet de mon portfolio afin de mettre en valeur mes projets et compétences de manière moderne et personnalisée, tout en améliorant mes compétences de cette technologie.
 
 \\
@@ -141,11 +157,16 @@ Avant de coder quoi que ce soit, j'ai d'abord créé une maquette sur Figma, ce 
     },
     {
         name: "enron-vizualizer",
-        cover: IMAGE_PATH + "enron-vizualizer/cover.png",
+        cover: IMAGE_PATH + "/enron-vizualizer/image1.png",
         technologies: ["Django", "Python", "JS"],
         title: "Enron Vizualizer",
         summary: "Projet de Licence Pro. Implémentation d'une application web pour visualiser les e-mails échangés lors de l'affaire Enron et création d'un script de peuplement de BDD.",
-        images: [],
+        images: [
+                IMAGE_PATH + "/enron-vizualizer/image1.png",
+                IMAGE_PATH + "/enron-vizualizer/image2.png",
+                IMAGE_PATH + "/enron-vizualizer/image3.png",
+                IMAGE_PATH + "/enron-vizualizer/image4.png"
+        ],
         context: `L'affaire Enron est un des plus grands scandales financiers des États-Unis, mettant en lumière des pratiques de manipulation comptable et financière qui ont conduit à la faillite de l'entreprise en 2001. Au cœur de cette affaire, des milliers d'e-mails échangés entre les employés d'Enron ont servi d'indice pour comprendre les dynamiques internes de l'entreprise et l'implication de ses dirigeants.
 
 \\
@@ -164,11 +185,15 @@ L'objectif principal est l'implémentation d'une application web pour visualiser
     },
     {
         name: "afpa-dpc",
-        cover: IMAGE_PATH + "afpadpc/cover.png",
+        cover: IMAGE_PATH + "afpa-dpc/cover.png",
         technologies: ["HTML", "Bootstrap", "JS"],
         title: "AFPA DPC",
         summary: "Mission de stage. Création d'une solution web de gestion de questionnaire destinés à des apprenants d'AFPA dans le cadre de la prévention contre les perturbateurs endocriniens.",
-        images: [],
+        images: [
+                IMAGE_PATH + "/afpa-dpc/image1.png",
+                IMAGE_PATH + "/afpa-dpc/image2.png",
+                IMAGE_PATH + "/afpa-dpc/image3.png"
+        ],
         context: `Lors de mon stage de 2ème année de BTS SIO, au sein de [DGT Concept](https://dgt-concept.com/) une entreprise spécialisée dans le développement de plateformes e-learning, j'ai eu comme mission de dématérialiser un questionnaire distribué aux apprenants de l'organisme de formation AFPA, dans le but d'en faciliter l'accès et d'en améliorer l'exploitation.
 
 \\

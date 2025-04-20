@@ -2,13 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const images = [
-    "/src/assets/images/projects/hackat-web/cover.png",
-    "/src/assets/images/projects/hackat-event/cover.png",
-    "/src/assets/images/projects/listdir/cover.png",
-];
-
-export default function Carousel() {
+export default function Carousel({ images }) {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState(0);
 
@@ -39,7 +33,7 @@ export default function Carousel() {
 
     return (
         <div className="relative mx-auto my-8 w-full">
-            <div className="relative h-[400px] overflow-hidden rounded-2xl bg-gray">
+            <div className="relative aspect-video max-h-[420px] w-full overflow-hidden rounded-2xl bg-gray">
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.img
                         key={images[index]}

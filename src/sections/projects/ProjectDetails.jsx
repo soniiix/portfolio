@@ -111,7 +111,7 @@ export function ProjectDetails() {
                         >
                             {project.context}
                         </ReactMarkdown>
-                        <Carousel/>
+                        <Carousel images={project.images}/>
                         <h2 className="text-2xl font-bold my-4">
                             Description
                         </h2>
