@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, useNavigate, Navigate } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { Header } from "../home/components/Header";
 import { Footer } from "../footer/Footer"
@@ -20,6 +20,9 @@ export function ProjectDetails() {
     const {projectName} = useParams();
 
     const project = PROJECTS.find(project => project.name == projectName);
+
+    if (!project) return <Navigate to="/" replace />;
+
     const nextProject = PROJECTS.indexOf(project) == PROJECTS.length - 1 ? PROJECTS[0] : PROJECTS[PROJECTS.indexOf(project) + 1];
     const projectType = PROJECTS_TYPE.find(type => type.value == project.contextType);
 
