@@ -1,4 +1,5 @@
 const IMAGE_PATH = "src/assets/images/projects/";
+const REPORT_PATH = "/src/assets/docs/reports/";
 
 export const PROJECTS = [
     {
@@ -34,7 +35,8 @@ Le projet a été mené de manière agile avec Trello, sur une VM Debian configu
         contextType: "school",
         location: "Les Sables d'Olonne",
         date: "2024",
-        teamwork: true
+        teamwork: true,
+        reference: {name: "report", link: REPORT_PATH + "report-hackat-web.pdf"}
     },
     {
         name: "listdir",
@@ -67,7 +69,8 @@ Ce projet m'a permis de consolider mes bases en Node.js tout en découvrant les 
         contextType: "personal",
         location: "Angers",
         date: "2025",
-        teamwork: false
+        teamwork: false,
+        reference: {name: "npm", link: "https://www.npmjs.com/package/@soniix/listdir"}
     },
     {
         name: "hackat-event",
@@ -110,7 +113,8 @@ Le développement en TypeScript, m'a permis d'écrire un code plus robuste et st
         contextType: "school",
         location: "Les Sables d'Olonne",
         date: "2023/2024",
-        teamwork: false
+        teamwork: false,
+        reference: {name: "report", link: REPORT_PATH + "report-hackat-event.pdf"}
     },
     {
         name: "portfolio",
@@ -132,7 +136,8 @@ Avant de coder quoi que ce soit, j'ai d'abord créé une maquette sur Figma, ce 
         contextType: "personal",
         location: "Angers",
         date: "2025",
-        teamwork: false
+        teamwork: false,
+        reference: {name: "figma", link: "https://www.figma.com/design/LtiUa6AQJQcSGKbsTiuMpv/Portfolio?node-id=0-1&t=JNqmWvMdyNtUGtXT-1"}
     },
     {
         name: "enron-vizualizer",
@@ -154,7 +159,8 @@ L'objectif principal est l'implémentation d'une application web pour visualiser
         contextType: "school",
         location: "Angers",
         date: "2025",
-        teamwork: true
+        teamwork: true,
+        reference: {name: "report", link: REPORT_PATH + "report-enron-vizualizer.pdf"}
     },
     {
         name: "afpa-dpc",
@@ -185,6 +191,7 @@ Le site a été entièrement développé en HTML, CSS, JS et PHP, en suivant une
         contextType: "professional",
         location: "Les Sables d'Olonne",
         date: "2023",
-        teamwork: true
+        teamwork: true,
+        reference: {name: "report", link: REPORT_PATH + "report-afpa-dpc.pdf"}
     },
 ];
