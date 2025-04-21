@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Title } from "../home/components/Title";
 import { FilterButton } from "./components/FilterButton";
 import { useState } from "react";
@@ -21,7 +22,14 @@ export function Projects() {
     return (
         <section id="projects" className="scroll-mt-20 flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
             <div className="h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40">
-                <Title size={"4xl"} title={"Mes réalisations"} />
+                <motion.div
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                >
+                    <Title size={"4xl"} title={"Mes réalisations"} />
+                </motion.div>
                 <div className="mt-7 max-[540px]:grid max-[540px]:grid-cols-2 flex flex-row gap-3">
                     {CATEGORIES.map((category) =>
                         <FilterButton

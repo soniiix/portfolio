@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Title } from "../home/components/Title";
 import { AboutCard } from "./components/AboutCard";
 import { RiCodeSSlashFill } from "react-icons/ri";
@@ -15,7 +16,14 @@ export function About() {
     return (
         <section id="about" className="scroll-mt-20 flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
             <div className="h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40 ">
-                <Title size={"4xl"} title={"À propos"} />
+                <motion.div
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                >
+                    <Title size={"4xl"} title={"À propos"} />
+                </motion.div>
                 <div className="mt-7 grid w-full grid-cols-1 gap-9 lg:grid-cols-2">
                     <AboutCard
                         body={[
