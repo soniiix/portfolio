@@ -15,7 +15,7 @@ export function ExperienceCard({ title, company, period, location, missions, rep
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.4 }}
             className="mt-6 flex flex-col rounded-2xl bg-gray px-8 py-7 font-manrope font-semibold gap-y-4"
         >
             <div className="hover:cursor-pointer flex flex-row items-center justify-between"  onClick={handleClick}>

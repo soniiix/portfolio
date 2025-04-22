@@ -12,7 +12,7 @@ export function Contact() {
                             viewport={{ once: true }}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2, duration: 0.5 }}
+                            transition={{ delay: 0.2, duration: 0.4 }}
                         >
                             <Title size="4xl" title="Me contacter" />
                         </motion.div>
@@ -21,7 +21,7 @@ export function Contact() {
                             viewport={{ once: true }}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3, duration: 0.5 }}
+                            transition={{ delay: 0.3, duration: 0.4 }}
                         >
                             Mon profil vous a-t-il intéressé ?
                             <br/>
@@ -34,7 +34,7 @@ export function Contact() {
                         viewport={{ once: true }}
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
                     >
                         <Form/>
                     </motion.div>

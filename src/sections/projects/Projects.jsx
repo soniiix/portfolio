@@ -26,7 +26,7 @@ export function Projects() {
                     viewport={{ once: true }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.5 }}
+                    transition={{ delay: 0.2, duration: 0.4 }}
                 >
                     <Title size={"4xl"} title={"Mes réalisations"} />
                 </motion.div>
@@ -34,7 +34,7 @@ export function Projects() {
                     viewport={{ once: true }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
+                    transition={{ delay: 0.3, duration: 0.4 }}
                     className="mt-7 max-[540px]:grid max-[540px]:grid-cols-2 flex flex-row gap-3"
                 >
                     {CATEGORIES.map((category) =>
@@ -51,7 +51,7 @@ export function Projects() {
                     viewport={{ once: true }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
                 >
                     <div
                         key={currentFilter}

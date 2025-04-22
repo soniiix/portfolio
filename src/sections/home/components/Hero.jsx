@@ -11,17 +11,17 @@ export function Hero() {
                 <div className="flex flex-col items-center justify-center py-40 min-[1210px]:items-start">
                     <motion.div
                         className="mt-5 grid w-full grid-cols-1 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0"
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
                     >
                         <Title title="Quentin Couzinet" size="6xl" />
                     </motion.div>
                     <motion.span
                         className="mt-3 font-manrope text-2xl font-semibold"
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.4 }}
                     >
                         Étudiant en Licence Professionnelle Métiers{" "}
                         <br className="max-sm:hidden" /> de l'Informatique, parcours Applications web.
@@ -29,9 +29,9 @@ export function Hero() {
                     {/* ACTION BUTTONS */}
                     <motion.div
                         className="mt-5 grid w-full grid-cols-1 gap-y-3 font-manrope max-[1210px]:justify-center sm:flex sm:flex-row sm:gap-0"
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.4 }}
                     >
                         <a
                             href="/#projects"
@@ -68,9 +68,9 @@ export function Hero() {
                 </div>
                 <motion.div
                     className="hidden pt-3 min-[1210px]:flex min-[1210px]:flex-row min-[1210px]:items-center min-[1210px]:justify-start"
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.3 }}
                 >
                     <img
                         src="/src/assets/images/code-snippet.png"
