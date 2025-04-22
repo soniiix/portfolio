@@ -15,7 +15,7 @@ export function AboutCard({ title, body, width }) {
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
         >
             {title && (
                 <h1 className="mb-4 text-xl font-bold text-blue">{title}</h1>

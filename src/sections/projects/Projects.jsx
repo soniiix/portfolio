@@ -26,11 +26,17 @@ export function Projects() {
                     viewport={{ once: true }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
                 >
                     <Title size={"4xl"} title={"Mes réalisations"} />
                 </motion.div>
-                <div className="mt-7 max-[540px]:grid max-[540px]:grid-cols-2 flex flex-row gap-3">
+                <motion.div
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    className="mt-7 max-[540px]:grid max-[540px]:grid-cols-2 flex flex-row gap-3"
+                >
                     {CATEGORIES.map((category) =>
                         <FilterButton
                             key={category.value} 
@@ -40,25 +46,34 @@ export function Projects() {
                             onClick={handleFilterClick}
                         />
                     )}        
-                </div>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-9 xl:grid-cols-3">
-                    {PROJECTS
-                        .filter((project) => 
-                            project.category === currentFilter || currentFilter === "ALL"
-                        )
-                        .map((project) => 
-                            <ProjectCard 
-                                key={project.title}
-                                image={project.cover}
-                                title={project.title}
-                                technologies={project.technologies}
-                                description={project.summary}
-                                github={project.github}
-                                name={project.name}
-                            />
-                        )
-                    }
-                </div>
+                </motion.div>
+                <motion.div 
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                >
+                    <div
+                        key={currentFilter}
+                        className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-9 xl:grid-cols-3">
+                        {PROJECTS
+                            .filter((project) => 
+                                project.category === currentFilter || currentFilter === "ALL"
+                            )
+                            .map((project) => 
+                                <ProjectCard 
+                                    key={project.title}
+                                    image={project.cover}
+                                    title={project.title}
+                                    technologies={project.technologies}
+                                    description={project.summary}
+                                    github={project.github}
+                                    name={project.name}
+                                />
+                            )
+                        }
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

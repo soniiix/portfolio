@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
@@ -10,7 +11,13 @@ export function ExperienceCard({ title, company, period, location, missions, rep
     }
 
     return (
-        <div className="mt-6 flex flex-col rounded-2xl bg-gray px-8 py-7 font-manrope font-semibold gap-y-4">
+        <motion.div 
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="mt-6 flex flex-col rounded-2xl bg-gray px-8 py-7 font-manrope font-semibold gap-y-4"
+        >
             <div className="hover:cursor-pointer flex flex-row items-center justify-between"  onClick={handleClick}>
                 <h2 className="flex text-xl font-bold">
                     {title} 
@@ -57,6 +64,6 @@ export function ExperienceCard({ title, company, period, location, missions, rep
                 </a>
             </div>
             </>}
-        </div>
+        </motion.div>
     )
 }
