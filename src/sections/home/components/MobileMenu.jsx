@@ -94,6 +94,7 @@ export function MobileMenu() {
                             </HashLink>
                         ))}
                         <a 
+                            aria-label="Lien vers mon profil Github"
                             href="https://github.com/soniiix"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -107,6 +108,7 @@ export function MobileMenu() {
                             </li>
                         </a>
                         <a 
+                            aria-label="Lien vers mon profil LinkedIn"
                             href="https://www.linkedin.com/in/quentin-couzinet/"
                             target="_blank"
                             rel="noopener noreferrer"

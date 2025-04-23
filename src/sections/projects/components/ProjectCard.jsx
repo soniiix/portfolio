@@ -21,10 +21,15 @@ export function ProjectCard({ title, description, image, technologies, github, n
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="flex flex-col rounded-2xl bg-gray"
         >
-            <Link to={"/project/" + name} className="relative overflow-hidden rounded-t-[16px]">
+            <Link
+                to={"/project/" + name}
+                className="relative overflow-hidden rounded-t-[16px]" 
+                aria-label={"Lien vers la page de détails du projet " + title}
+            >
                 <img 
                     src={image} 
                     className="h-40 w-full object-cover transition-transform duration-500 ease-out hover:scale-110"
+                    alt={"Illustration du projet " + title}
                 />
             </Link>
             <div className="flex flex-col flex-grow gap-2 px-8 py-5 font-manrope">
@@ -35,7 +40,8 @@ export function ProjectCard({ title, description, image, technologies, github, n
                 <p className="mt-2 font-medium">{description}</p>
                 <div className="flex-grow"></div>
                 <div className="mt-3 flex flex-row items-center justify-end">
-                    <a 
+                    <a
+                        aria-label={"Lien vers le dépôt Github du projet " + title}
                         href={github}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -45,6 +51,7 @@ export function ProjectCard({ title, description, image, technologies, github, n
                     <Link
                         to={"/project/" + name}
                         className="ml-2.5 transition-colors duration-200 flex flex-row items-center gap-1 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                        aria-label={"Lien vers la page de détails du projet " + title}
                     >
                         <span>En savoir plus</span>
                         <TbExternalLink />

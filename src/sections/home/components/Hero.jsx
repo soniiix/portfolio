@@ -74,7 +74,7 @@ export function Hero() {
                 >
                     <img
                         src="/images/code-snippet.png"
-                        alt="Code illustration"
+                        alt="Image de code JavaScript"
                         className="max-w-[500px]"
                     />
                 </motion.div>

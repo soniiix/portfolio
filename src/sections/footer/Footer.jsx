@@ -12,6 +12,7 @@ export function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex h-10 w-10 items-center justify-center rounded-full bg-gray hover:cursor-pointer"
+                        aria-label="Lien vers mon profil Github"
                     >
                         <IoLogoGithub size={28} />
                     </a>
@@ -19,6 +20,7 @@ export function Footer() {
                         href="https://www.linkedin.com/in/quentin-couzinet/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Lien vers mon profil LinkedIn"
                     >
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray hover:cursor-pointer">
                             <GrLinkedinOption size={21}/>
