@@ -17,7 +17,7 @@ export const PROJECTS = [
         context: `Lors de ma 2ème année de BTS SIO, l'un des objectifs majeurs était la réalisation d'un projet métier concret. Celui-ci portait sur le développement de deux applications complémentaires en rapport avec l'organisations d'hackathons : une application web nommée "HackatWeb" et une application mobile nommée "Hackat'Event". C'est sur la première, HackatWeb, que je vais me concentrer ici.
 
 \\
-Le projet s'appuyait sur [ce document](/src/assets/docs/subject-hackathon.pdf), qui décrit le contexte, les attentes du commanditaire fictif, l'organisation générale ainsi que les besoins fonctionnels sous forme de user stories. Il a fallu adopter une approche agile pour répondre à ces besoins : chaque fonctionnalité était développée progressivement, selon des sprints.
+Le projet s'appuyait sur [ce document](/docs/subject-hackathon.pdf), qui décrit le contexte, les attentes du commanditaire fictif, l'organisation générale ainsi que les besoins fonctionnels sous forme de user stories. Il a fallu adopter une approche agile pour répondre à ces besoins : chaque fonctionnalité était développée progressivement, selon des sprints.
 
 \\
 Le but principal de l'application est de permettre la consultation des informations sur les hackathons et l'inscription à ces derniers. L'application a été développée avec le framework MVC [Symfony](https://symfony.com/).`,
@@ -34,7 +34,7 @@ Parmi les pages principales, on retrouve :
 L'architecture de l'application respecte le modèle MVC. Elle est pensée pour séparer clairement la logique métier, la gestion des données et l'affichage, permettant ainsi une meilleure maintenabilité. L'usage de composants Symfony comme [Security](https://symfony.com/doc/current/security.html) et [Form](https://symfony.com/doc/current/forms.html) a permis d'implémenter un système d'authentification robuste (mots de passe hashés, redirections sécurisées) et des formulaires fiables. Le front, enrichi avec Bootstrap et JavaScript, offre une navigation fluide, avec par exemple une recherche de hackathons en temps réel sans rechargement de page.
 
 \\
-Le projet a été mené de manière agile avec Trello, sur une VM Debian configurée pour refléter un environnement de production. Cette expérience nous a permis d'aller au-delà d'une simple implémentation technique en abordant des problématiques de conception, de sécurité, et de gestion de projet, proches de celles rencontrées dans un contexte professionnel. La fiche descriptive de réalisation professionnelle est [disponible ici](/src/assets/docs/e5-sheets/hackat-web.pdf).`,
+Le projet a été mené de manière agile avec Trello, sur une VM Debian configurée pour refléter un environnement de production. Cette expérience nous a permis d'aller au-delà d'une simple implémentation technique en abordant des problématiques de conception, de sécurité, et de gestion de projet, proches de celles rencontrées dans un contexte professionnel. La fiche descriptive de réalisation professionnelle est [disponible ici](/docs/e5-sheets/hackat-web.pdf).`,
         github: "https://github.com/soniiix/hackathon/tree/master/hackatWeb",
         category: "WEB",
         contextType: "school",
@@ -94,7 +94,7 @@ Ce projet m'a permis de consolider mes bases en Node.js tout en découvrant les 
         context: `Lors de ma 2ème année de BTS SIO, l'un des objectifs majeurs était la réalisation d'un projet métier concret. Celui-ci portait sur le développement de deux applications complémentaires en rapport avec l'organisations d'hackathons : une application web nommée "HackatWeb" et une application mobile nommée "Hackat'Event". C'est sur la deuxième, Hackat'Event, que je vais me concentrer ici.
 
 \\
-Le projet s'appuyait sur [ce document](/src/assets/docs/subject-hackathon.pdf), qui décrit le contexte, les attentes du commanditaire fictif, l'organisation générale ainsi que les besoins fonctionnels sous forme de user stories. Il a fallu adopter une approche agile pour répondre à ces besoins : chaque fonctionnalité était développée progressivement, selon des sprints.
+Le projet s'appuyait sur [ce document](/docs/subject-hackathon.pdf), qui décrit le contexte, les attentes du commanditaire fictif, l'organisation générale ainsi que les besoins fonctionnels sous forme de user stories. Il a fallu adopter une approche agile pour répondre à ces besoins : chaque fonctionnalité était développée progressivement, selon des sprints.
 
 \\
 Le but principal de l'application est de permettre la consultation des informations sur les hackathons et l'inscription aux ateliers liés aux hackathons. L'application a été développée avec le framework [Ionic](https://ionicframework.com/). Un point important du projet est le développement d'un webservice ainsi qu'une API.`,
@@ -119,7 +119,7 @@ Parmi les fonctionnalités clés :
 Le projet a été mené selon une approche agile (Trello) et déployé sur une VM Debian configurée pour simuler un environnement de production. L'application repose sur une architecture clairement séparée entre le front-end et le back-end, ce qui m'a permis de bien appréhender les échanges entre services web.
 
 \\
-Le développement en TypeScript, m'a permis d'écrire un code plus robuste et structuré, avec une meilleure gestion des types et des erreurs. Ce projet a ainsi renforcé mes compétences en développement mobile hybride, en conception d'API REST, et en modélisation de données, dans un cadre proche des attentes professionnelles. La fiche descriptive de réalisation professionnelle est [disponible ici](/src/assets/docs/e5-sheets/hackat-event.pdf).`,
+Le développement en TypeScript, m'a permis d'écrire un code plus robuste et structuré, avec une meilleure gestion des types et des erreurs. Ce projet a ainsi renforcé mes compétences en développement mobile hybride, en conception d'API REST, et en modélisation de données, dans un cadre proche des attentes professionnelles. La fiche descriptive de réalisation professionnelle est [disponible ici](/docs/e5-sheets/hackat-event.pdf).`,
         github: "https://github.com/soniiix/hackathon/tree/master/hackatEvent",
         category: "MOBILE",
         contextType: "school",
