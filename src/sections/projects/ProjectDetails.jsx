@@ -1,4 +1,4 @@
-import { useParams, useNavigate, Navigate } from "react-router";
+import { useParams, Navigate } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { Header } from "../home/components/Header";
 import { Footer } from "../footer/Footer"
@@ -9,6 +9,7 @@ import { CgNpm } from "react-icons/cg";
 import { IoLogoGithub } from "react-icons/io";
 import { CATEGORIES } from "./Projects";
 import Carousel from "./components/Carousel";
+import { motion } from "framer-motion";
 
 const PROJECTS_TYPE = [
     {value: "professional", label: "Professionnel", icon: <GoBriefcase className="mt-0.5"/>},
@@ -55,16 +56,36 @@ export function ProjectDetails() {
                     {/*
                     <span className="text-sm text-[##fffff5db] font-medium font-manrope">{"Projets > " + project.title}</span>
                     */}
-                    <h1 className="font-manrope font-extrabold text-[32px]">{project.title}</h1>
+                    <motion.h1
+                        viewport={{ once: true }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.4 }}
+                        className="font-manrope font-extrabold text-[32px]"
+                    >
+                        {project.title}
+                    </motion.h1>
                 </div>
             </div>
             <div className="flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-20 font-manrope h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40">
                     <aside className="flex flex-col">
-                        <h2 className="text-2xl font-bold mb-5">
+                        <motion.h2
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3, duration: 0.4 }}
+                            className="text-2xl font-bold mb-5"
+                        >
                             À&nbsp;propos
-                        </h2>
-                        <div className="flex flex-col min-[560px]:max-lg:grid min-[560px]:grid-cols-2 min-[850px]:grid-cols-3 px-8 py-5 bg-gray h-fit rounded-2xl">
+                        </motion.h2>
+                        <motion.div 
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4, duration: 0.4 }}
+                            className="flex flex-col min-[560px]:max-lg:grid min-[560px]:grid-cols-2 min-[850px]:grid-cols-3 px-8 py-5 bg-gray h-fit rounded-2xl"
+                        >
                             <div className="flex items-center gap-2 mb-2">
                                 <GoClock className="mt-0.5"/>
                                 <span>{project.date}</span>
@@ -91,31 +112,24 @@ export function ProjectDetails() {
                                 <GoLocation className="mt-0.5"/>
                                 <span className="whitespace-nowrap">{project.location}</span>
                             </div>
-                        </div>
+                        </motion.div>
                     </aside>
                     <div className="flex flex-col">
-                        <h2 className="text-2xl font-bold mb-4">
-                            Contexte
-                        </h2>
-                        <ReactMarkdown
-                            components={{
-                                a: ({ node, ...props }) => (
-                                <a
-                                    {...props}
-                                    className="underline underline-offset-4 hover:text-blue transition-colors duration-200"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                />
-                                )
-                            }}
+                        <motion.h2 
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3, duration: 0.4 }}
+                            className="text-2xl font-bold mb-4"
                         >
-                            {project.context}
-                        </ReactMarkdown>
-                        <Carousel images={project.images}/>
-                        <h2 className="text-2xl font-bold my-4">
-                            Description
-                        </h2>
-                        <span>
+                            Contexte
+                        </motion.h2>
+                        <motion.div
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4, duration: 0.4 }}
+                        >
                             <ReactMarkdown
                                 components={{
                                     a: ({ node, ...props }) => (
@@ -125,7 +139,35 @@ export function ProjectDetails() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     />
-                                    ),ul: ({ node, ...props }) => (
+                                    )
+                                }}
+                            >
+                                {project.context}
+                            </ReactMarkdown>
+                        </motion.div>
+                        <motion.div
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4, duration: 0.4 }}
+                        >
+                            <Carousel images={project.images}/>
+                        </motion.div>
+                        <h2 className="text-2xl font-bold my-4">
+                            Description
+                        </h2>
+                        <span>
+                            <ReactMarkdown
+                                components={{
+                                    a: ({ node, ...props }) => (
+                                        <a
+                                            {...props}
+                                            className="underline underline-offset-4 hover:text-blue transition-colors duration-200"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        />
+                                    ),
+                                    ul: ({ node, ...props }) => (
                                         <ul
                                             {...props}
                                             className="list-disc list-inside marker:text-blue"
@@ -136,11 +178,15 @@ export function ProjectDetails() {
                                 {project.description}
                             </ReactMarkdown>
                         </span>
-                        <h2 className="text-2xl font-bold mt-8 mb-5">
+                        <h2 className="text-2xl font-bold mt-10 mb-5">
                             Voir plus
                         </h2>
                         <div className="flex flex-col min-[1390px]:flex-row gap-4 min-[1390px]:gap-9">
-                            <a
+                            <motion.a
+                                viewport={{ once: true }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2, duration: 0.4 }}
                                 href={project.reference.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -151,8 +197,12 @@ export function ProjectDetails() {
                                     <span className="text-nowrap">{referenceDescription}</span>
                                 </div>
                                 {referenceIcon}
-                            </a>
-                            <a
+                            </motion.a>
+                            <motion.a
+                                viewport={{ once: true }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.35, duration: 0.4 }}
                                 href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -163,8 +213,12 @@ export function ProjectDetails() {
                                     <span className="text-nowrap">Voir le dépôt</span>
                                 </div>
                                 <IoLogoGithub size={50}/>
-                            </a>
-                            <a
+                            </motion.a>
+                            <motion.a
+                                viewport={{ once: true }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.5, duration: 0.4 }}
                                 href={"/project/" + nextProject.name}
                                 className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
                             >
@@ -173,7 +227,7 @@ export function ProjectDetails() {
                                     <span className="text-nowrap">Projet suivant</span>
                                 </div>
                                 <RxArrowRight size={50}/>
-                            </a>
+                            </motion.a>
                         </div>
                     </div>
                 </div>
