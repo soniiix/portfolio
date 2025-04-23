@@ -174,7 +174,16 @@ Dans le cadre de ma Licence Professionnelle, le deuxième projet d'année visait
 
 \\
 L'objectif principal est l'implémentation d'une application web pour visualiser des informations pertinentes contenus les e-mails échangés entre les employés d'Enron (dont quelques externes). Un deuxième objectif est le développement d'un script d'automatisation du peuplement de la base de données, à partir des fichiers (texte plain) contenus dans le jeu de données (20 Go approximativement).`,
-        description: "*En cours*",
+        description: `Le script de peuplement, écrit en Python, parse des milliers de fichiers XML et e-mails bruts pour alimenter la base de données. Il utilise des techniques d'optimisation comme le cache mémoire, les insertions en masse (\`bulk_create\`) et une gestion optimale des erreurs, afin de garantir des performances élevées malgré le volume colossal de données.
+
+\\
+Côté frontend, l'interface propose plusieurs sections complémentaires : un tableau de bord avec des statistiques clés, une page listant tous les employés, une autre dédiée aux e-mails, une zone de favoris personnalisée, et une section de visualisation de données. Cette dernière s'appuie sur la bibliothèque Chart.js pour afficher des graphiques dynamiques (histogrammes, courbes, diagrammes circulaires) permettant de suivre l'évolution temporelle des échanges, la répartition des e-mails par type, l'activité des expéditeurs, etc.
+
+\\
+Des fonctionnalités telles que la recherche avancée de mails (par mot-clé, date, sujet...) ou l'affichage détaillé via une modale viennent enrichir l'expérience utilisateur. Le stockage local est aussi exploité pour gérer les favoris.
+
+\\
+Ce projet m'a permis de manipuler un dataset complexe dans un environnement réel, de concevoir une base de données relationnelle adaptée à des volumes massifs, et de créer une application complète mêlant backend solide et frontend interactif. C'est une expérience particulièrement formatrice sur le plan de la rigueur, de la performance, et de la qualité de code à maintenir en équipe.`,
         github: "https://github.com/soniiix/enron-data-visualizer",
         category: "WEB",
         contextType: "school",
