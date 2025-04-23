@@ -40,7 +40,7 @@ export function Hero() {
                             Voir mes réalisations
                         </a>
                         <a
-                            href="src/assets/docs/resume.pdf"
+                            href="/docs/resume.pdf"
                             download="CV_QuentinCouzinet.pdf"
                             className="flex flex-row items-start justify-center rounded-full bg-white px-[10px] py-[12px] font-bold text-nowrap text-blue hover:cursor-pointer hover:bg-[#e6e6e6] transition-colors duration-200 sm:ml-2 sm:px-[30px]"
                         >
