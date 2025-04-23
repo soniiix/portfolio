@@ -53,6 +53,7 @@ export function Hero() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden md:flex md:flex-row md:items-center md:justify-center rounded-full bg-white text-blue hover:cursor-pointer hover:bg-[#e6e6e6] transition-colors duration-200 ml-2 px-[10px]"
+                            aria-label="Lien vers mon profil Github"
                         >
                             <IoLogoGithub size={30} />
                         </a>
@@ -61,6 +62,7 @@ export function Hero() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden md:flex md:flex-row md:items-center md:justify-center rounded-full bg-white pb-0.5 text-blue hover:cursor-pointer hover:bg-[#e6e6e6] transition-colors duration-200 ml-2 px-[10px]"
+                            aria-label="Lien vers mon profil LinkedIn"
                         >
                             <GrLinkedinOption size={28} />
                         </a>
