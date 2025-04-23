@@ -9,7 +9,9 @@ export function PrivacyPolicy () {
             <Header baseScrolled={true}/>
             <div className="flex justify-center border-b-1 border-[#363c44] bg-dark-blue">
                 <div className="h-full w-full max-w-[1920px] px-8 py-20 text-white md:px-24 lg:px-40 ">
-                    <Title title="Politique de confidentialité" size="4xl"/>
+                    <h1 className="font-manrope font-extrabold text-[32px]">
+                        Politique de confidentialité
+                    </h1>
                     <div className="font-manrope flex flex-col items-start gap-5 mt-6">
                         <h2 className="text-xl font-bold">
                             1. Collecte des Informations

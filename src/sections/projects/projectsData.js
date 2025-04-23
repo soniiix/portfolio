@@ -1,5 +1,5 @@
-const IMAGE_PATH = "/src/assets/images/projects/";
-const REPORT_PATH = "/src/assets/docs/reports/";
+const IMAGE_PATH = "/images/projects/";
+const REPORT_PATH = "/docs/reports/";
 
 export const PROJECTS = [
     {

@@ -73,7 +73,7 @@ export function Hero() {
                     transition={{ duration: 0.4, delay: 0.3 }}
                 >
                     <img
-                        src="/src/assets/images/code-snippet.png"
+                        src="/images/code-snippet.png"
                         alt="Code illustration"
                         className="max-w-[500px]"
                     />
