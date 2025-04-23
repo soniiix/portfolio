@@ -12,6 +12,7 @@ export function NavLink({ title, anchorId = "", scrolled }) {
 
     return (
         <HashLink
+            smooth
             to={anchorId.startsWith("/#") ? anchorId : `/#${anchorId}`}
             className={"rounded-full px-[17px] py-[12px] font-semibold " + linkHover}
         >

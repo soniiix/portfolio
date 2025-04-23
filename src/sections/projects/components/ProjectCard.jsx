@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { IoLogoGithub } from "react-icons/io";
 import { TbExternalLink } from "react-icons/tb";
+import { Link } from "react-router";
 
 /**
  * @param {Object} props
@@ -20,12 +21,12 @@ export function ProjectCard({ title, description, image, technologies, github, n
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="flex flex-col rounded-2xl bg-gray"
         >
-            <a href={"/project/" + name} className="relative overflow-hidden rounded-t-[16px]">
+            <Link to={"/project/" + name} className="relative overflow-hidden rounded-t-[16px]">
                 <img 
                     src={image} 
                     className="h-40 w-full object-cover transition-transform duration-500 ease-out hover:scale-110"
                 />
-            </a>
+            </Link>
             <div className="flex flex-col flex-grow gap-2 px-8 py-5 font-manrope">
                 <span className="text-sm font-bold text-blue">
                     {technologies.join(", ").toUpperCase()}
@@ -41,13 +42,13 @@ export function ProjectCard({ title, description, image, technologies, github, n
                     >
                         <IoLogoGithub size={33} color="#0788FF" />
                     </a>
-                    <a
-                        href={"/project/" + name}
+                    <Link
+                        to={"/project/" + name}
                         className="ml-2.5 transition-colors duration-200 flex flex-row items-center gap-1 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
                     >
                         <span>En savoir plus</span>
                         <TbExternalLink />
-                    </a>
+                    </Link>
                 </div>
             </div>
         </motion.div>

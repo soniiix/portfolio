@@ -1,4 +1,4 @@
-import { useParams, Navigate } from "react-router";
+import { useParams, Navigate, Link } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { Header } from "../home/components/Header";
 import { Footer } from "../footer/Footer"
@@ -18,6 +18,7 @@ const PROJECTS_TYPE = [
 ]
 
 export function ProjectDetails() {
+    const MotionLink = motion.create(Link);
     const {projectName} = useParams();
 
     const project = PROJECTS.find(project => project.name == projectName);
@@ -49,7 +50,7 @@ export function ProjectDetails() {
     }
 
     return (
-        <>
+        <div key={project.name}>
             <Header baseScrolled={true}/>
             <div className="flex justify-center bg-linear-to-r from-[#0240C7] to-[#42A3EA] h-full text-white">
                 <div className="w-full max-w-[1920px] px-8 py-18 md:px-24 lg:px-40">
@@ -214,12 +215,12 @@ export function ProjectDetails() {
                                 </div>
                                 <IoLogoGithub size={50}/>
                             </motion.a>
-                            <motion.a
+                            <MotionLink
                                 viewport={{ once: true }}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5, duration: 0.4 }}
-                                href={"/project/" + nextProject.name}
+                                to={"/project/" + nextProject.name}
                                 className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
                             >
                                 <div className="flex flex-col gap-1">
@@ -227,12 +228,12 @@ export function ProjectDetails() {
                                     <span className="text-nowrap">Projet suivant</span>
                                 </div>
                                 <RxArrowRight size={50}/>
-                            </motion.a>
+                            </MotionLink>
                         </div>
                     </div>
                 </div>
             </div>
             <Footer/>
-        </>
+        </div>
     )
 }

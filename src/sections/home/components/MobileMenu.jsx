@@ -80,6 +80,7 @@ export function MobileMenu() {
                     <ul className="font-semibold">
                         {SECTIONS.map((section, index) => (
                             <HashLink 
+                                smooth
                                 key={index}
                                 to={section.anchorId}
                                 onClick={toggleMenu}
@@ -122,6 +123,7 @@ export function MobileMenu() {
 
                     <div className="flex flex-col items-center justify-center gap-6">
                         <HashLink
+                            smooth
                             to="/#contact"
                             onClick={toggleMenu}
                             className="rounded-full bg-white hover:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer transition-colors duration-200"
