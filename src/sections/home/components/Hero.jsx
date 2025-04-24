@@ -3,6 +3,7 @@ import { Title } from "./Title";
 import { TbDownload } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
 import { GrLinkedinOption } from "react-icons/gr";
+import { HashLink } from 'react-router-hash-link';
 
 export function Hero() {
     return (
@@ -33,12 +34,13 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.4 }}
                     >
-                        <a
-                            href="/#projects"
+                        <HashLink
+                            smooth
+                            to="/#projects"
                             className="flex flex-row items-center justify-center rounded-full bg-blue px-[30px] py-[12px] text-center font-bold hover:cursor-pointer hover:bg-btn-hover transition-colors duration-200"
                         >
                             Voir mes réalisations
-                        </a>
+                        </HashLink>
                         <a
                             href="/docs/resume.pdf"
                             download="CV_QuentinCouzinet.pdf"
