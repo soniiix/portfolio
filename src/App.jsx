@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Home } from "./sections/home/Home"
 import { About } from "./sections/about/About"
 import { Projects } from "./sections/projects/Projects"
@@ -9,6 +10,7 @@ import { Header } from "./sections/home/components/Header"
 function App() {
     return (
         <>
+            <Analytics />
             <Header />
             <Home/>
             <About/>
