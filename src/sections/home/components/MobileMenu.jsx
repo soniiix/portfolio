@@ -55,7 +55,7 @@ export function MobileMenu() {
         <>
             <div 
                 onClick={toggleMenu}
-                className="z-40 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover"
+                className="z-40 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover"
             >
                 <button className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none">
                     <span
@@ -85,7 +85,7 @@ export function MobileMenu() {
                                 to={section.anchorId}
                                 onClick={toggleMenu}
                             >
-                                <li key={index} className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover">
+                                <li key={index} className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover">
                                     <div className="me-8 mt-1 h-3.5 w-3.5 shrink-0">
                                         {section.icon}
                                     </div>
@@ -100,7 +100,7 @@ export function MobileMenu() {
                             rel="noopener noreferrer"
                             onClick={toggleMenu}
                         >
-                            <li className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover">
+                            <li className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover">
                                 <div className="me-8 mt-0.5 h-3.5 w-3.5 shrink-0">
                                     <IoLogoGithub size={20}/>
                                 </div>
@@ -114,7 +114,7 @@ export function MobileMenu() {
                             rel="noopener noreferrer"
                             onClick={toggleMenu}
                         >
-                            <li className="flex items-start pl-10.5 py-5 hover:cursor-pointer hover:bg-btn-hover">
+                            <li className="flex items-start pl-10.5 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover">
                                 <div className="me-8 mt-0.5 h-3.5 w-3.5 shrink-0">
                                     <GrLinkedinOption size={19}/>
                                 </div>
@@ -128,7 +128,7 @@ export function MobileMenu() {
                             smooth
                             to="/#contact"
                             onClick={toggleMenu}
-                            className="rounded-full bg-white hover:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer transition-colors duration-200"
+                            className="rounded-full bg-white hover:bg-[#e6e6e6] focus:bg-[#e6e6e6] active:bg-[#e6e6e6] text-blue px-[30px] py-[12px] font-bold hover:cursor-pointer transition-colors duration-200"
                         >
                             Me contacter
                         </HashLink>

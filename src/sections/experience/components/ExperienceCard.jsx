@@ -57,7 +57,7 @@ export function ExperienceCard({ title, company, period, location, missions, rep
                     href={reportLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors duration-200 flex flex-row items-center gap-2.5 rounded-full border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                    className="transition-colors duration-200 flex flex-row items-center gap-2.5 rounded-full border-2 px-3.5 py-1 font-semibold text-blue border-blue hover:bg-blue hover:text-white active:bg-blue active:text-white"
                 >
                     <span>Compte rendu de stage</span>
                     <FaArrowRightLong style={{ marginTop: "1px" }}/>

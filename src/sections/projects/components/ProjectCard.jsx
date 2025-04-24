@@ -28,7 +28,7 @@ export function ProjectCard({ title, description, image, technologies, github, n
             >
                 <img 
                     src={image} 
-                    className="h-40 w-full object-cover transition-transform duration-500 ease-out hover:scale-110"
+                    className="h-40 w-full object-cover transition-transform duration-500 ease-out hover:scale-110 active:scale-110"
                     alt={"Illustration du projet " + title}
                 />
             </Link>
@@ -50,7 +50,7 @@ export function ProjectCard({ title, description, image, technologies, github, n
                     </a>
                     <Link
                         to={"/project/" + name}
-                        className="ml-2.5 transition-colors duration-200 flex flex-row items-center gap-1 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                        className="ml-2.5 transition-colors duration-200 flex flex-row items-center gap-1 rounded-[22px] border-2 px-3.5 py-1 font-semibold text-blue border-blue hover:bg-blue hover:text-white active:bg-blue active:text-white"
                         aria-label={"Lien vers la page de détails du projet " + title}
                     >
                         <span>En savoir plus</span>

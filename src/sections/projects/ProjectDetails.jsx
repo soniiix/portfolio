@@ -136,7 +136,7 @@ export function ProjectDetails() {
                                     a: ({ node, ...props }) => (
                                     <a
                                         {...props}
-                                        className="underline underline-offset-4 hover:text-blue transition-colors duration-200"
+                                        className="underline underline-offset-4 hover:text-blue active:text-blue transition-colors duration-200"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     />
@@ -163,7 +163,7 @@ export function ProjectDetails() {
                                     a: ({ node, ...props }) => (
                                         <a
                                             {...props}
-                                            className="underline underline-offset-4 hover:text-blue transition-colors duration-200"
+                                            className="underline underline-offset-4 hover:text-blue active:text-blue transition-colors duration-200"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         />
@@ -191,7 +191,7 @@ export function ProjectDetails() {
                                 href={project.reference.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                                className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue border-blue hover:bg-blue hover:text-white active:bg-blue active:text-white"
                             >
                                 <div className="flex flex-col gap-1">
                                     <span className="text-xl font-bold text-white text-nowrap">{referenceTitle}</span>
@@ -207,7 +207,7 @@ export function ProjectDetails() {
                                 href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                                className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue border-blue hover:bg-blue hover:text-white active:bg-blue active:text-white"
                             >
                                 <div className="flex flex-col gap-1">
                                     <span className="text-xl font-bold text-white text-nowrap">Github</span>
@@ -221,7 +221,7 @@ export function ProjectDetails() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5, duration: 0.4 }}
                                 to={"/project/" + nextProject.name}
-                                className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue hover:border-blue hover:bg-blue hover:text-white"
+                                className="flex-1 transition-colors duration-200 flex flex-row items-center justify-between rounded-[22px] border-2 px-6 py-3 font-semibold text-blue border-blue hover:bg-blue hover:text-white active:bg-blue active:text-white"
                             >
                                 <div className="flex flex-col gap-1">
                                     <span className="text-xl font-bold text-white text-nowrap">{nextProject.title}</span>

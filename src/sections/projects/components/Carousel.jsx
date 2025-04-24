@@ -55,13 +55,13 @@ export default function Carousel({ images }) {
 
             <button
                 onClick={prev}
-                className="hover:cursor-pointer absolute top-1/2 left-4 z-10 -translate-y-1/2 rounded-full bg-blue p-3 text-white"
+                className="hover:cursor-pointer hover:bg-btn-hover active:bg-btn-hover transition-colors duration-200 absolute top-1/2 left-4 z-10 -translate-y-1/2 rounded-full bg-blue p-3 text-white"
             >
                 <IoIosArrowBack />
             </button>
             <button
                 onClick={next}
-                className="hover:cursor-pointer absolute top-1/2 right-4 z-10 -translate-y-1/2 rounded-full bg-blue p-3 text-white"
+                className="hover:cursor-pointer hover:bg-btn-hover active:bg-btn-hover transition-colors duration-200 absolute top-1/2 right-4 z-10 -translate-y-1/2 rounded-full bg-blue p-3 text-white"
             >
                 <IoIosArrowForward />
             </button>
