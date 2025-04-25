@@ -1,4 +1,4 @@
-const REPORTS_PATH = "src/assets/docs/reports/";
+const REPORTS_PATH = "/docs/reports/";
 
 export const EXPERIENCES = [
     {
