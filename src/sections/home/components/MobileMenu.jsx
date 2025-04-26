@@ -57,7 +57,10 @@ export function MobileMenu() {
                 onClick={toggleMenu}
                 className="z-40 flex h-11.5 w-11.5 items-center justify-center rounded-full bg-blue hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover"
             >
-                <button className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none">
+                <button 
+                    aria-label="Ouvrir le menu"
+                    className="flex flex-col space-y-2 p-2 hover:cursor-pointer focus:outline-none"
+                >
                     <span
                         className={`block h-[0.126rem] w-6 rounded bg-white transition-transform ${
                             isOpen ? "translate-y-[5px] rotate-45" : ""
@@ -79,48 +82,51 @@ export function MobileMenu() {
                 <div className="flex flex-col pt-30 pb-10 h-full w-full justify-between">
                     <ul className="font-semibold">
                         {SECTIONS.map((section, index) => (
-                            <HashLink 
-                                smooth
-                                key={index}
-                                to={section.anchorId}
-                                onClick={toggleMenu}
-                            >
-                                <li key={index} className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover">
+                            <li key={index}>
+                                <HashLink 
+                                    smooth
+                                    key={index}
+                                    to={section.anchorId}
+                                    onClick={toggleMenu}
+                                    className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover"
+                                >
                                     <div className="me-8 mt-1 h-3.5 w-3.5 shrink-0">
                                         {section.icon}
                                     </div>
                                     {section.title}
-                                </li>  
-                            </HashLink>
+                                </HashLink>
+                            </li>
                         ))}
-                        <a 
-                            aria-label="Lien vers mon profil Github"
-                            href="https://github.com/soniiix"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={toggleMenu}
-                        >
-                            <li className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover">
+                        <li>
+                            <a 
+                                aria-label="Lien vers mon profil Github"
+                                href="https://github.com/soniiix"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={toggleMenu}
+                                className="flex items-start pl-10 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover"
+                            >
                                 <div className="me-8 mt-0.5 h-3.5 w-3.5 shrink-0">
                                     <IoLogoGithub size={20}/>
                                 </div>
                                 Github
-                            </li>
-                        </a>
-                        <a 
-                            aria-label="Lien vers mon profil LinkedIn"
-                            href="https://www.linkedin.com/in/quentin-couzinet/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={toggleMenu}
-                        >
-                            <li className="flex items-start pl-10.5 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover">
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                aria-label="Lien vers mon profil LinkedIn"
+                                href="https://www.linkedin.com/in/quentin-couzinet/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={toggleMenu}
+                                className="flex items-start pl-10.5 py-5 hover:cursor-pointer hover:bg-btn-hover focus:bg-btn-hover active:bg-btn-hover"
+                            >
                                 <div className="me-8 mt-0.5 h-3.5 w-3.5 shrink-0">
                                     <GrLinkedinOption size={19}/>
                                 </div>
                                 LinkedIn
-                            </li>
-                        </a>
+                            </a>
+                        </li>
                     </ul>
 
                     <div className="flex flex-col items-center justify-center gap-6">
