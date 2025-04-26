@@ -5,6 +5,11 @@ import { useState } from "react";
 import { ProjectCard } from "./components/ProjectCard";
 import { PROJECTS } from "./projectsData.js"
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/pagination";
+
 export const CATEGORIES = [
     {label: "Tout", value: "ALL"},
     {label: "Web", value: "WEB"},
@@ -55,7 +60,7 @@ export function Projects() {
                 >
                     <div
                         key={currentFilter}
-                        className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-9 xl:grid-cols-3">
+                        className="mt-6 hidden md:grid md:grid-cols-2 gap-9 xl:grid-cols-3">
                         {PROJECTS
                             .filter((project) => 
                                 project.category === currentFilter || currentFilter === "ALL"
@@ -73,6 +78,40 @@ export function Projects() {
                             )
                         }
                     </div>
+                </motion.div>
+                <motion.div
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.4 }}
+                    className="mt-6 md:hidden"
+                >
+                    <Swiper 
+                        key={currentFilter}
+                        pagination={{ clickable: true }}
+                        modules={[Pagination]}
+                        spaceBetween={30}
+                    >
+                        {PROJECTS
+                            .filter((project) => 
+                                project.category === currentFilter || currentFilter === "ALL"
+                            )
+                            .map((project) => 
+                                <SwiperSlide key={project.title}>
+                                    <ProjectCard
+                                        key={project.title}
+                                        image={project.cover}
+                                        title={project.title}
+                                        technologies={project.technologies}
+                                        description={project.summary}
+                                        github={project.github}
+                                        name={project.name}
+                                        className="h-[460px]"
+                                    />
+                                </SwiperSlide>
+                            )
+                        }
+                    </Swiper>
                 </motion.div>
             </div>
         </section>

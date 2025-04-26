@@ -15,6 +15,22 @@
     .bg-gradient {
         background: linear-gradient(to bottom, #3C538F 67%, #19284E);
     }
+
+    .swiper-wrapper{
+        @apply mb-10!;
+    }
+
+    .swiper-pagination{
+        @apply flex! flex-row! items-center! justify-start!;
+    }
+
+    .swiper-pagination-bullet {
+        @apply bg-gray! w-8! h-1! rounded-2xl! opacity-100!;
+      }
+      
+    .swiper-pagination-bullet-active {
+        @apply bg-blue!;
+    }
 }
 
 @font-face {
@@ -51,3 +67,4 @@
     src: url("assets/fonts/Manrope/Manrope-ExtraBold.ttf") format('truetype');
     font-weight: 800;
 }
+

@@ -13,13 +13,13 @@ import { Link } from "react-router";
  * @param {string} props.name The name to use for the project details page link.
  * @returns {JSX.Element}
  */
-export function ProjectCard({ title, description, image, technologies, github, name }) {
+export function ProjectCard({ title, description, image, technologies, github, name, className }) {
     return (
         <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="flex flex-col rounded-2xl bg-gray"
+            className={`flex flex-col rounded-2xl bg-gray ${className}`}
         >
             <Link
                 to={"/project/" + name}
