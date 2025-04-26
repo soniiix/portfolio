@@ -8,23 +8,22 @@ export function Header({ baseScrolled = false }) {
     const headerSpecs = scrolled ? "bg-dark-blue border-[#363c44] shadow-sm" : "bg-[#3C538F] border-[#4e6299]";
 
     useEffect(() => {
-        if (!baseScrolled){
+        if (baseScrolled) {
+            setScrolled(true);
+        } else {
             const handleScroll = () => {
-                if (document.body.scrollTop > headerRef.current.offsetHeight || 
-                    document.documentElement.scrollTop > headerRef.current.offsetHeight) {
-                    setScrolled(true)
+                if (window.scrollY > headerRef.current.offsetHeight) {
+                    setScrolled(true);
                 } else {
-                    setScrolled(false)
+                    setScrolled(false);
                 }
             }
     
-            window.addEventListener('scroll', handleScroll);
-    
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            }
+            handleScroll();
+            window.addEventListener("scroll", handleScroll);
+            return () => window.removeEventListener("scroll", handleScroll);
         }
-    }, [])
+    }, []);
 
     return (
         <header ref={headerRef} className={"transition-colors duration-300 z-20 sticky top-0 w-full flex h-21 justify-center border-b-1 " + headerSpecs}>
