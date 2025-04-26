@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
-export function ExperienceCard({ title, company, period, location, missions, reportLink }) {
+export function ExperienceCard({ title, company, period, location, missions, reportLink, animationDelay }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
@@ -15,7 +15,7 @@ export function ExperienceCard({ title, company, period, location, missions, rep
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.4 }}
+            transition={{ delay: 0.3 + animationDelay / 10, duration: 0.4 }}
             className="mt-6 flex flex-col rounded-2xl bg-gray px-8 py-7 font-manrope font-semibold gap-y-4"
         >
             <div className="hover:cursor-pointer flex flex-row items-center justify-between"  onClick={handleClick}>

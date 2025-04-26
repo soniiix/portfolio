@@ -25,6 +25,7 @@ export function Experience() {
                             location={experience.location}
                             missions={experience.missions}
                             reportLink={experience.reportLink}
+                            animationDelay={index}
                         />
                     )}
                 </div>
