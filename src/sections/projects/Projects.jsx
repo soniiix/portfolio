@@ -84,13 +84,14 @@ export function Projects() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.4 }}
-                    className="mt-6 md:hidden"
+                    className="mt-6 md:hidden -mx-8"
                 >
                     <Swiper 
                         key={currentFilter}
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
-                        spaceBetween={30}
+                        spaceBetween={35}
+                        className="px-8!"
                     >
                         {PROJECTS
                             .filter((project) => 

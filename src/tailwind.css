@@ -21,7 +21,7 @@
     }
 
     .swiper-pagination{
-        @apply flex! flex-row! items-center! justify-start!;
+        @apply flex! flex-row! items-center! justify-start! px-8;
     }
 
     .swiper-pagination-bullet {
