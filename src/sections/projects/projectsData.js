@@ -44,43 +44,6 @@ Le projet a été mené de manière agile avec Trello, sur une VM Debian configu
         reference: {name: "report", link: REPORT_PATH + "report-hackat-web.pdf"}
     },
     {
-        name: "listdir",
-        cover: IMAGE_PATH + "listdir/cover.png",
-        technologies: ["Node JS", "NPM"],
-        title: "listdir",
-        summary: "Création d'une commande permettant de lister en détail le contenu d'un répertoire. Publication sur NPM pour la rendre installable.",
-        images: [
-                IMAGE_PATH + "/listdir/image1.png",
-                IMAGE_PATH + "/listdir/image2.png"
-        ],
-        context: `Souhaitant approfondir mes connaissances en Node.js, j'ai visionné plusieurs vidéos de Grafikart. L'une d'elles [aborde la lecture et l'écriture de fichiers](https://youtu.be/cT6b6_XzFmI?si=ksSNYuQ3G89FQnLq), un sujet qui m'a particulièrement captivé.
-
-\\
-Après avoir réalisé le TP proposé dans la vidéo, je me suis dit : et pourquoi ne pas aller plus loin ? J'ai donc eu l'idée d'améliorer l'exercice en ajoutant la possibilité de lister le contenu de n'importe quel répertoire. Puis, je me suis demandé : et si je pouvais en faire une commande globale ? Une sorte d'alternative à \`ls\` sur Linux ou \`dir\` sur Windows, mais écrite en JavaScript.
-
-\\
-J'ai trouvé ce défi intéressant, car ce genre d'outil est généralement développé en bash. C'était donc l'occasion de sortir de l'ordinaire et d'explorer une autre approche avec Node.js. Je me suis donc lancé dans l'expérience.`,
-        description: `J'ai créé cette commande pour offrir une alternative simple et esthétique aux commandes classiques de listing de fichiers comme \`ls\` ou \`dir\`. Le but est de pouvoir explorer rapidement n'importe quel dossier du système, avec un affichage structuré et coloré directement dans le terminal.
-
-\\
-Dès son exécution, listdir analyse le chemin spécifié (ou le dossier courant par défaut), en récupérant des informations précises sur chaque élément : type (fichier ou dossier), taille, et date de dernière modification. Les données sont ensuite affichées sous forme de tableau, avec une attention particulière portée à l'alignement des colonnes, la lisibilité, et les couleurs, grâce à la librairie [chalk](https://www.npmjs.com/package/chalk).
-
-\\
-Un argument optionnel \`-a\` permet également d'afficher les fichiers cachés, ce qui rend l'outil plus flexible selon les besoins. La commande gère aussi les cas de répertoires vides ou inexistants, en affichant des messages clairs et informatifs.
-
-\\
-Techniquement, listdir exploite les modules natifs de Node.js pour lire le système de fichiers, enrichis de quelques fonctions personnalisées comme le formatage des tailles ou la coloration des noms de dossiers.
-\\
-Ce projet m'a permis de consolider mes bases en Node.js tout en découvrant les bonnes pratiques liés à la publication sur NPM.`,
-        github: "https://github.com/soniiix/nodejs-listdir",
-        category: "OTHER",
-        contextType: "personal",
-        location: "Angers",
-        date: "2025",
-        teamwork: false,
-        reference: {name: "npm", link: "https://www.npmjs.com/package/@soniix/listdir"}
-    },
-    {
         name: "hackat-event",
         cover: IMAGE_PATH + "hackat-event/cover.png",
         technologies: ["Ionic, Express JS"],
@@ -129,33 +92,6 @@ Le développement en TypeScript, m'a permis d'écrire un code plus robuste et st
         reference: {name: "report", link: REPORT_PATH + "report-hackat-event.pdf"}
     },
     {
-        name: "portfolio",
-        cover: IMAGE_PATH + "portfolio/cover.png",
-        technologies: ["React JS", "Tailwind CSS"],
-        title: "Portfolio",
-        summary: "Développement de mon portfolio avec React, dans le cadre de mon apprentissage de cette technologie. Création de la maquette avec Figma, et design du site avec Tailwind.",
-        images: [
-                IMAGE_PATH + "/portfolio/image1.png",
-                IMAGE_PATH + "/portfolio/image2.png",
-                IMAGE_PATH + "/portfolio/image3.png"
-        ],
-        context: `Dans le cadre de mon apprentissage de [React](https://react.dev/), j'ai entrepris le développement complet de mon portfolio afin de mettre en valeur mes projets et compétences de manière moderne et personnalisée, tout en améliorant mes compétences de cette technologie.
-
-\\
-Avant de coder quoi que ce soit, j'ai d'abord créé une maquette sur Figma, ce qui m'a permis de structurer visuellement les différentes sections du site et de réfléchir à l'expérience utilisateur. Pour le design, j'ai choisi d'utiliser Tailwind CSS, un framework CSS utilitaire qui m'a offert une grande flexibilité et une bonne rapidité d'intégration.`,
-        description: "*En cours*",
-        /*        
-        conclusion - Ce projet a été l'occasion pour moi d'explorer les concepts clés de React mais aussi de routing avec React Router. J'ai également travaillé sur la gestion des données dynamiques pour afficher les projets depuis un fichier JSON, et sur l'adaptabilité mobile pour assurer une expérience fluide sur tous les écrans.",
-        */
-        github: "https://github.com/soniiix/portfolio",
-        category: "WEB",
-        contextType: "personal",
-        location: "Angers",
-        date: "2025",
-        teamwork: false,
-        reference: {name: "figma", link: "https://www.figma.com/design/LtiUa6AQJQcSGKbsTiuMpv/Portfolio?node-id=0-1&t=JNqmWvMdyNtUGtXT-1"}
-    },
-    {
         name: "enron-vizualizer",
         cover: IMAGE_PATH + "/enron-vizualizer/image1.png",
         technologies: ["Django", "Python", "JS"],
@@ -191,6 +127,70 @@ Ce projet m'a permis de manipuler un dataset complexe dans un environnement rée
         date: "2025",
         teamwork: true,
         reference: {name: "report", link: REPORT_PATH + "report-enron-vizualizer.pdf"}
+    },
+    {
+        name: "portfolio",
+        cover: IMAGE_PATH + "portfolio/cover.png",
+        technologies: ["React", "Tailwind CSS"],
+        title: "Portfolio",
+        summary: "Développement de mon portfolio avec React, dans le cadre de mon apprentissage de cette technologie. Création de la maquette avec Figma, et design du site avec Tailwind.",
+        images: [
+                IMAGE_PATH + "/portfolio/image1.png",
+                IMAGE_PATH + "/portfolio/image2.png",
+                IMAGE_PATH + "/portfolio/image3.png"
+        ],
+        context: `Dans le cadre de mon apprentissage de [React](https://react.dev/), j'ai entrepris le développement complet de mon portfolio afin de mettre en valeur mes projets et compétences de manière moderne et personnalisée, tout en améliorant mes compétences de cette technologie.
+
+\\
+Avant de coder quoi que ce soit, j'ai d'abord créé une maquette sur Figma, ce qui m'a permis de structurer visuellement les différentes sections du site et de réfléchir à l'expérience utilisateur. Pour le design, j'ai choisi d'utiliser Tailwind CSS, un framework CSS utilitaire qui m'a offert une grande flexibilité et une bonne rapidité d'intégration.`,
+        description: "*En cours*",
+        /*        
+        conclusion - Ce projet a été l'occasion pour moi d'explorer les concepts clés de React mais aussi de routing avec React Router. J'ai également travaillé sur la gestion des données dynamiques pour afficher les projets depuis un fichier JSON, et sur l'adaptabilité mobile pour assurer une expérience fluide sur tous les écrans.",
+        */
+        github: "https://github.com/soniiix/portfolio",
+        category: "WEB",
+        contextType: "personal",
+        location: "Angers",
+        date: "2025",
+        teamwork: false,
+        reference: {name: "figma", link: "https://www.figma.com/design/LtiUa6AQJQcSGKbsTiuMpv/Portfolio?node-id=0-1&t=JNqmWvMdyNtUGtXT-1"}
+    },
+    {
+        name: "listdir",
+        cover: IMAGE_PATH + "listdir/cover.png",
+        technologies: ["Node JS", "NPM"],
+        title: "listdir",
+        summary: "Création d'une commande permettant de lister en détail le contenu d'un répertoire. Publication sur NPM pour la rendre installable.",
+        images: [
+                IMAGE_PATH + "/listdir/image1.png",
+                IMAGE_PATH + "/listdir/image2.png"
+        ],
+        context: `Souhaitant approfondir mes connaissances en Node.js, j'ai visionné plusieurs vidéos de Grafikart. L'une d'elles [aborde la lecture et l'écriture de fichiers](https://youtu.be/cT6b6_XzFmI?si=ksSNYuQ3G89FQnLq), un sujet qui m'a particulièrement captivé.
+
+\\
+Après avoir réalisé le TP proposé dans la vidéo, je me suis dit : et pourquoi ne pas aller plus loin ? J'ai donc eu l'idée d'améliorer l'exercice en ajoutant la possibilité de lister le contenu de n'importe quel répertoire. Puis, je me suis demandé : et si je pouvais en faire une commande globale ? Une sorte d'alternative à \`ls\` sur Linux ou \`dir\` sur Windows, mais écrite en JavaScript.
+
+\\
+J'ai trouvé ce défi intéressant, car ce genre d'outil est généralement développé en bash. C'était donc l'occasion de sortir de l'ordinaire et d'explorer une autre approche avec Node.js. Je me suis donc lancé dans l'expérience.`,
+        description: `J'ai créé cette commande pour offrir une alternative simple et esthétique aux commandes classiques de listing de fichiers comme \`ls\` ou \`dir\`. Le but est de pouvoir explorer rapidement n'importe quel dossier du système, avec un affichage structuré et coloré directement dans le terminal.
+
+\\
+Dès son exécution, listdir analyse le chemin spécifié (ou le dossier courant par défaut), en récupérant des informations précises sur chaque élément : type (fichier ou dossier), taille, et date de dernière modification. Les données sont ensuite affichées sous forme de tableau, avec une attention particulière portée à l'alignement des colonnes, la lisibilité, et les couleurs, grâce à la librairie [chalk](https://www.npmjs.com/package/chalk).
+
+\\
+Un argument optionnel \`-a\` permet également d'afficher les fichiers cachés, ce qui rend l'outil plus flexible selon les besoins. La commande gère aussi les cas de répertoires vides ou inexistants, en affichant des messages clairs et informatifs.
+
+\\
+Techniquement, listdir exploite les modules natifs de Node.js pour lire le système de fichiers, enrichis de quelques fonctions personnalisées comme le formatage des tailles ou la coloration des noms de dossiers.
+\\
+Ce projet m'a permis de consolider mes bases en Node.js tout en découvrant les bonnes pratiques liés à la publication sur NPM.`,
+        github: "https://github.com/soniiix/nodejs-listdir",
+        category: "OTHER",
+        contextType: "personal",
+        location: "Angers",
+        date: "2025",
+        teamwork: false,
+        reference: {name: "npm", link: "https://www.npmjs.com/package/@soniix/listdir"}
     },
     {
         name: "afpa-dpc",
