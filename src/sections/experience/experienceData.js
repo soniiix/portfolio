@@ -3,6 +3,32 @@ const REPORTS_PATH = "/docs/reports/";
 export const EXPERIENCES = [
     {
         title: "Développeur web stagiaire",
+        company: "Association HCLM",
+        period: "MARS - JUILLET 2025",
+        location: "La Possonnière (49)",
+        missions: [
+            {
+                title: "Développement du site web de l'association et d'un plugin PHP WordPress sur-mesure",
+                items: [
+                "Conception et mise en place d'un espace adhérent (profil, statut d'adhésion, documents...), avec gestion des droits d'accès et interface responsive, ",
+                "automatisation de la gestion des adhésions avec Paid Member Subscriptions et Stripe, ",
+                "développement d'un moteur de recherche avancée adapté aux publications de l'association, ",
+                "affichage de bulletins dans un visionneur PDF intégré.",
+                ]
+            },
+            {
+                title: "Documentation et formation",
+                items: [
+                "Rédaction d'un mode d'emploi complet (60 pages) d'administration,",
+                "organisation d'une journée de formation pour les responsables",
+                "présentation du projet devant le Conseil d'Administration de l'association."
+                ]
+            },
+        ],
+        reportLink: REPORTS_PATH + "report-hclm.pdf"
+    },
+    {
+        title: "Développeur web stagiaire",
         company: "DGT Concept",
         period: "JANVIER - MARS 2024",
         location: "Les Sables d'Olonne (85)",
