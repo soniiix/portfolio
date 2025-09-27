@@ -24,8 +24,7 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.4 }}
                     >
-                        Étudiant en Licence Professionnelle Métiers{" "}
-                        <br className="max-sm:hidden" /> de l'Informatique, parcours Applications web.
+                        Alternant Développeur web fullstack.
                     </motion.span>
                     {/* ACTION BUTTONS */}
                     <motion.div

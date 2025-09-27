@@ -8,8 +8,8 @@ import { GrLinkedinOption } from "react-icons/gr";
 const educationHistory = [
     "2018 : Stage de 3ème en assistance et services informatiques, première expérience professionnelle.",
     "2022 : BAC général spécialités Numériques et Sciences Informatiques, mention Assez Bien.",
-    `2024 : BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers.
-    Note obtenue : 14.75/20`,
+    "2024 : BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers.",
+    "2025 : Licence Professionnelle Métiers de l'Informatique, parcours applications web."
 ];
 
 export function About() {
@@ -33,17 +33,26 @@ export function About() {
                 >
                     <AboutCard
                         body={[
-                            "Bonjour 👋  moi c'est Quentin, je suis étudiant en Licence Pro à l'Université d'Angers.",
+                            "Bonjour 👋  moi c'est Quentin, je suis étudiant en MBA Développeur Fullstack chez MyDigitalSchool Angers.",
                             <br />,
                             <br />,
-                            "Passionné par l'informatique et les nouvelles technologies depuis mon adolescence, mon parcours s'est naturellement orienté dans ce domaine.",
+                            "J'ai intégré le ",
+                            <a 
+                                href='https://grouperoyer.com' 
+                                className="underline underline-offset-4 hover:text-blue active:text-blue transition-colors duration-200"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Groupe Royer
+                            </a>,
+                            " en tant qu'alternant développeur web, où je contribue au développement et à la maintenance de plateformes Prestashop et de projets web liés au service e-commerce.",
                         ]}
                         width={2}
                     />
                     <AboutCard
                         title={"Mon parcours scolaire"}
                         body={[
-                            <ul className="space-y-3 min-[1074px]:space-y-10">
+                            <ul className="space-y-3 min-[1074px]:space-y-8">
                                 {educationHistory.map((stage, index) => (
                                     <li key={index} className="flex items-start">
                                         <div className="me-3 mt-1 h-3.5 w-3.5 shrink-0 text-blue">
@@ -59,10 +68,10 @@ export function About() {
                         <AboutCard
                             title={"Mes objectifs"}
                             body={[
-                                "Après ma formation actuelle, je prévois de rejoindre le MBA Développeur Full-Stack proposé par MyDigitalSchool à Angers.",
+                                "Mon objectif est de devenir un Développeur web polyvalent, capable de gérer aussi bien le front que le back-end sur des projets concrets et variés.",
                                 <br />,
                                 <br />,
-                                "Mon objectif à long terme est de poursuivre une carrière en tant que Développeur Web.",
+                                "En alternance au sein du Groupe Royer, je cherche à renforcer mes compétences techniques et à contribuer activement aux projets web de l'équipe."
                             ]}
                         />
                         <AboutCard
